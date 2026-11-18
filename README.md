@@ -19,6 +19,7 @@ request after that can take up to a minute** while it starts again; later reques
 | `APPROACH.md` | The AI tools used, where the LLM sits in the app and why it never decides, what was checked by hand |
 | `docs/policy_schema.md` | The policy format, with one rule explained field by field |
 | `docs/thursday.md` | The runbook for the blind test |
+| `docs/manual_amendment_cheatsheet.md` | Entering a policy amendment by hand: the JSON for each kind of change and the sentence the app then shows (tested) |
 | `docs/data_model.md`, `docs/deploy.md`, `docs/break_it.md` | The database; deploying to Render; the break-it pass |
 
 ## The task kit is not in this repo

@@ -84,7 +84,9 @@ Commands are for Git Bash in the repo folder. **After 10:00 commit nothing excep
     not. Keep them in mind for step 20.
 17. If steps 15 and 16 are right, go to step 19.
 18. **(15 min) Correct it by hand.** Either edit the AI's draft, or press **Edit the current version by hand (no
-    AI)** for a fresh copy of v5.0. In **Edit the draft (JSON)**:
+    AI)** for a fresh copy of v5.0. **The exact JSON for every kind of change, and the sentence the app must then
+    show, is in `docs/manual_amendment_cheatsheet.md`** (with a review checklist at its end). In **Edit the draft
+    (JSON)**:
     - set `"effective_from": "YYYY-MM-DD"`;
     - a limit: `parameters.limits.<spot_po|emergency_po|rfq>`: `"value"` and `"operator"` (`"<"` below, `"<="` at
       or below);
