@@ -10,7 +10,7 @@ The policy is a data file, not code, so a policy change is uploaded, checked and
 make every decision, so the same requests always get the same answers. AI only reads free text (a chat message, a
 policy change, a contract PDF); it never decides.
 
-**Hosted demo:** `<HOSTED_URL>` (Render, free plan). After 15 minutes without traffic it sleeps, and **the first
+**Hosted demo:** https://corvo-procurement-d2uh.onrender.com (Render, free plan). After 15 minutes without traffic it sleeps, and **the first
 request after that can take up to a minute** while it starts again; later requests are fast.
 
 | Read next | For |
