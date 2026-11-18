@@ -1,0 +1,47 @@
+ref,case,item,route,supplier,unit_price,value,suggestions,grouped_with,same_po_as,flags,why
+ST-001/1,clubbing: anchor line,ITM-1028,SPOT_PO,S019,2039.22,20392.20,,ST-002/1,ST-002/1,,"No contract; valued at the latest PO in 365 days (7300167, 2039.22) x 10 = 20,392.20 (with ST-002); below 2,00,000 and bought from Active S019 in 365 days: spot to preferred #1 S019 (score 12.51) at its own reference price 2039.22"
+ST-002/1,clubbing: day 14 and need-by +7 both join (D4 D5),ITM-1028,SPOT_PO,S019,2039.22,20392.20,,ST-001/1,ST-001/1,,"Created 11-16 = 14 calendar days after ST-001 (joins, D4); need-by 11-27 = 7 days after 11-20 (joins, D5)"
+ST-003/1,clubbing: need-by +8 does not join,ITM-1028,SPOT_PO,S019,2039.22,10196.10,,ST-004/1,ST-004/1,,"Need-by 11-28 is 8 days from ST-001's 11-20: not ST-001's requirement; anchors a new one. 5 x 2039.22 = 10,196.10; spot S019. Its PO is not consolidated with ST-001's: requirements 14 days apart"
+ST-004/1,clubbing: day 15 does not join the first; joins the second,ITM-1028,SPOT_PO,S019,2039.22,10196.10,,ST-003/1,ST-003/1,,Created 11-17 = 15 days after ST-001: cannot join it; 1 day after ST-003 and need-by 1 day apart: joins ST-003
+ST-005/1,consolidation anchor,ITM-1033,SPOT_PO,S020,65837.89,65837.89,,,ST-006/1,,"Latest PO 7300211 at 65837.89; below 2,00,000; spot to S020 (preferred #1, only member)"
+ST-006/1,consolidation at exactly 24 hours joins (D6),ITM-1034,SPOT_PO,S020,41415.60,41415.60,,,ST-005/1,,"Latest PO 7300220 at 41415.6 (S020); spot S020. Same supplier, plant, route; created exactly 24 h after ST-005: same PO"
+ST-007/1,consolidation at 24 h plus one second does not join; timestamp with seconds,ITM-1029,SPOT_PO,S020,1589.94,15899.40,,,,,"Latest PO 7300179 at 1589.94 x 10; spot S020 (#1). Created 24 h 0 min 1 s after ST-005, the first requirement on that PO: a new PO"
+ST-008/1,emergency above the 5.3 limit,ITM-1033,RFQ,,,526703.12,S020;S017;S019,,,,"Emergency, bought from Active, but 8 x 65837.89 = 5,26,703.12 > 5,00,000: 5.3 fails; not below 2,00,000: 5.4 fails; below 10,00,000: RFQ, 3 suggestions: preferred list [S020] then top-ups by on-time/100 + quality/5 (S017 1.61, S019 1.51)"
+ST-009/1,emergency with no Active purchase history,ITM-1025,RFQ,,,7800.00,S014;S015;S013,,,,"No PO in 365 days (no history at all), no contract: valued at standard 780 x 10; 5.3 and 5.4 need an Active purchase in 365 days: both fail; RFQ; preferred list empty: top-ups Bearings & Transmission S014 1.83, S015 1.61, S013 1.40"
+ST-010/1,Capex item with an estimate (the estimate is not used),ITM-1070,CAPEX_SOURCING,,,744137.67,S020;S047;S048;S046;S045,,,,"Capex: 5.1. Valued at the latest PO 7300465 (2025-12-12, within 365 days) 744137.67, not the requester's 8,00,000 estimate (estimates value new items only, 1.2). 5 suggestions: preferred [S020], then top-ups S047 1.62, S048 1.58, S046 1.55, S045 1.40 (S020 already listed)"
+ST-011/1,new item with no estimate (D12),NEW,NEW_ITEM_SOURCING,,,,,,,,"No item matches; no estimate: value blank, reason says the estimate is missing; no suggestions"
+ST-012/1,only contract is a Blocked supplier's (Ex 10 pattern),ITM-1006,RFQ,,,36500.00,S003;S002;S005,,,,"RC-2026-005 belongs to S004 (Blocked): does not apply, not used for valuation; no PO history: standard 365 x 100 = 36,500; not bought from Active: RFQ; top-ups Steel & Metals S003, S002, S005; never S004"
+ST-013/1,item whose only history is an Inactive supplier (S031),ITM-1049,CONTRACT_PO,S029,191.31,3826.20,,,,,"The only PO in 365 days is to S031 (Inactive). RC-2026-007 (S029, Active) covers the helmet with ceiling: contract PO at 191.31 x 20 = 3,826.20. No item in the kit has only Blocked history in the window; this is the nearest case"
+ST-014/1,fewer than three suggestable suppliers (D9),ITM-1052,RFQ,,,320693.00,S032;S033,,,,"RC-2025-020 ended 2026-09-30: not usable. Latest PO 32069.3 x 10 = 3,20,693; RFQ asks 3, but Lubricants has only S032 and S033 (S033 on the preferred list through the expired contract, 6.1b): 2 suggestions, never padded"
+ST-015/1,PDF-only RC-2026-033 the day before it starts,ITM-1056,SPOT_PO,S036,71155.71,142311.42,,,,,"Created 11-19; RC-2026-033 starts 11-20: not valid. Latest PO 7300375 at 71155.71 x 2 = 1,42,311.42; spot to preferred #1 S036"
+ST-016/1,RC-2026-033 on its start date,ITM-1056,CONTRACT_PO,S035,64654.36,129308.72,,,,,"Created 11-20 at CHK1 (a different plant, so it does not club with ST-015): contract PO at 64654.36 x 2"
+ST-017/1,RC-2026-033 after it starts,ITM-1057,CONTRACT_PO,S035,10689.51,32068.53,,,,,Contract PO at 10689.51 x 3
+ST-018/1,multi-line PR spanning plants (PUN1 line),ITM-1043,SPOT_PO,S026,175.90,8795.00,,,,,Latest PO 175.9 x 50; spot S026. The PR's other line is at CHK1: a separate requirement and PO
+ST-018/2,multi-line PR spanning plants (CHK1 line),ITM-1043,SPOT_PO,S026,175.90,5277.00,,,,,175.9 x 30; spot S026; separate requirement and PO from line 1 (plant differs)
+ST-019/1,decimal quantity; rounding half up,ITM-1003,CONTRACT_PO,S001,83.69,10503.10,,,,,"RC-2025-011 rate 83.69 x 125.5 kg = 10,503.095, rounded half up to 10,503.10 (D11)"
+ST-020/1,item code not in the master (flag F3),ITM-1048,CONTRACT_PO,S029,90.32,4516.00,,,,F3,ITM-9999 does not exist; the description matches ITM-1048; RC-2026-007 rate 90.32 x 50
+ST-021/1,purpose clause and typos,ITM-1048,CONTRACT_PO,S029,90.32,9032.00,,,,,"'Nitrle coated glovs for paint shop maintenance' matches ITM-1048 (typos tolerated, purpose clause dropped); CHK1, so not clubbed with ST-020; 90.32 x 100"
+ST-022/1,ambiguous description (D21),NEW,NEW_ITEM_SOURCING,,,700.00,,,,,'Hex bolt' matches ITM-1009 and ITM-1014 equally: treated as a new item with both named; valued from the estimate 7 x 100
+ST-023/1,unit mismatch (V5),ITM-1048,NOT_PROCESSED,,,,,,,,"Nitrile gloves are bought in PAIR, the line says KG: not processed"
+ST-024/1,code disagrees with description (flag F4); ceiling 1 of 3,ITM-1021,CONTRACT_PO,S013,202.20,18198.00,,,,F4,"Code ITM-1021 (bearing 6205) wins over 'Safety helmet ISI'. RC-2026-002 has 38,000 left: 202.2 x 90 = 18,198 (19,802 left)"
+ST-025/1,ceiling 2 of 3,ITM-1022,CONTRACT_PO,S013,579.62,5796.20,,,,,"579.62 x 10 = 5,796.20 (14,005.80 left). Created 25 h after ST-024: not the same PO"
+ST-026/1,requirement empties a ceiling exactly,ITM-1024,CONTRACT_PO,S013,311.24,14005.80,,,,,"311.24 x 45 = 14,005.80 = exactly what is left: consumed + value <= ceiling holds with equality (4.2); RC-2026-002 is now full"
+ST-027/1,after the ceiling is exhausted,ITM-1023,SPOT_PO,S014,1500.01,2722.52,,,,,"RC-2026-002 has nothing left: no contract PO. Valued at the lowest applicable contract rate 1361.26 x 2 = 2,722.52 (3.1a reading in valuation.py); spot to preferred #1 S014 at its reference price 1500.01"
+ST-028/1,two contracts for one item: the cheaper while it has ceiling,ITM-1009,CONTRACT_PO,S006,6.45,6450.00,,,,,"RC-2026-015 (6.45, 12,000 left) and RC-2026-013 (7.06): lowest rate with ceiling (4.3): RC-2026-015, 6,450 (5,550 left)"
+ST-029/1,two contracts: the cheaper runs out,ITM-1009,CONTRACT_PO,S007,7.06,7060.00,,,,,"6.45 x 1000 = 6,450 > 5,550 left on RC-2026-015: RC-2026-013 at 7.06"
+ST-030/1,ceiling shared across items of one contract,ITM-1014,CONTRACT_PO,S006,20.64,2064.00,,,,,"RC-2026-015 also covers ITM-1014: 20.64 x 100 = 2,064 fits in 5,550 (3,486 left)"
+ST-031/1,the cheaper contract fits again for a small requirement,ITM-1009,CONTRACT_PO,S006,6.45,645.00,,,,,"Created 11-20, 17 days after ST-028 (not clubbed). 645 fits in 3,486: RC-2026-015 again"
+ST-032/1,PDF-only RC-2026-031 the day before it starts,ITM-1036,SPOT_PO,S023,4360.80,21804.00,,,,,Created 11-14; RC-2026-031 starts 11-15: not valid (and not 'applicable' for valuation). Latest PO 4360.8 x 5; spot to #1 S023
+ST-033/1,RC-2026-031 on its start date,ITM-1036,CONTRACT_PO,S021,3537.76,17688.80,,,,,Created 11-15 at CHK1: contract PO at 3537.76 x 5
+ST-034/1,RFP with fewer suppliers than asked,ITM-1040,RFP,,,1149136.80,S023;S024;S021;S022,,,,"19152.28 x 60 = 11,49,136.80: RFP asks 5; preferred [S023], top-ups S024 1.71, S021 1.65, S022 1.47: 4 in all"
+ST-035/1,service on a contract,ITM-1061,CONTRACT_PO,S038,178463.60,178463.60,,,,,RC-2026-012 rate 178463.6 x 1 MON
+ST-036/1,possible duplicate pair (first),ITM-1041,CONTRACT_PO,S025,71.50,28600.00,,ST-037/1,ST-037/1,,Same item and plant within 14 days: clubbed with ST-037; 400 x 71.5 on RC-2026-009
+ST-037/1,possible duplicate pair (second; flag F7),ITM-1041,CONTRACT_PO,S025,71.50,28600.00,,ST-036/1,ST-036/1,F7,"Same requester, item, plant, quantity and need-by 20 minutes after ST-036: flag F7; still clubbed and processed (D27)"
+ST-038/1,description says urgent but field is Normal (flag F5),ITM-1047,CONTRACT_PO,S029,26.09,2609.00,,,,F5,RC-2026-007 rate 26.09 x 100; urgency stays Normal
+ST-039/1,quantity zero (V1),ITM-1047,NOT_PROCESSED,,,,,,,,Quantity must be positive
+ST-040/1,unknown plant (V2),ITM-1047,NOT_PROCESSED,,,,,,,,PUN9 is not a plant
+ST-041/1,need-by blank (V4),ITM-1053,NOT_PROCESSED,,,,,,,,Need-by date required
+ST-042/1,quantity not a number (V6),ITM-1053,NOT_PROCESSED,,,,,,,,'ten' is not a number
+ST-043/1,creation time blank (V7),ITM-1053,NOT_PROCESSED,,,,,,,,Creation time required
+ST-044/1,first of a duplicated PR line,ITM-1053,SPOT_PO,S032,4245.19,16980.76,,,,,RC-2025-020 expired; latest PO 7300358 at 4245.19 x 4; spot to #1 S032
+ST-044/1#2,second line with the same PR number and line (V3),ITM-1053,NOT_PROCESSED,,,,,,,,Duplicate of an earlier line with the same PR number and line number

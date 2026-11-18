@@ -1,0 +1,48 @@
+Need_By_Date,URGENCY,PR_No,PR_LINE,Created_At,Plant,Item_Code,Description,Quantity,UOM,Estimated_Unit_Price,Requester,Department
+2026-11-27,Normal,ST-002,1,2026-11-16 15:00,CHK1,ITM-1028,Contactor 3 pole 32A,5,NOS,,R. Kale,Maintenance
+2026-11-25,Normal,ST-006,1,2026-11-04 09:00,PUN1,ITM-1034,Encoder for CNC spindle (Vertex),1,NOS,,V. Iyer,Maintenance
+2026-11-20,Normal,ST-001,1,2026-11-02 10:00,CHK1,ITM-1028,Contactor 3 pole 32A,5,NOS,,R. Kale,Maintenance
+2026-11-28,Normal,ST-003,1,2026-11-16 16:00,CHK1,ITM-1028,Contactor 3 pole 32A,3,NOS,,A. Joshi,Production
+2026-11-27,Normal,ST-004,1,2026-11-17 09:00,CHK1,ITM-1028,Contactor 3 pole 32A,2,NOS,,A. Joshi,Production
+2026-11-25,Normal,ST-005,1,2026-11-03 09:00,PUN1,ITM-1033,Servo drive 2kW (Vertex CNC),1,NOS,,V. Iyer,Maintenance
+2026-11-25,Normal,ST-007,1,2026-11-04 09:00:01,PUN1,ITM-1029,MCB 4 pole 63A,10,NOS,,V. Iyer,Maintenance
+2026-11-16,Emergency,ST-008,1,2026-11-12 11:00,CHK1,ITM-1033,Servo drive 2kW (Vertex CNC),8,NOS,,N. Desai,Maintenance
+2026-11-14,Emergency,ST-009,1,2026-11-11 14:00,CHK1,ITM-1025,Chain sprocket 08B 20T,10,NOS,,N. Desai,Maintenance
+2027-01-15,Normal,ST-010,1,2026-11-14 10:00,PUN1,ITM-1070,Air compressor 30HP screw,1,NOS,800000,K. Menon,Production
+2026-12-10,Normal,ST-011,1,2026-11-10 10:00,PUN1,,Ultrasonic flaw detector model UFD-9,1,NOS,,S. Rao,Quality
+2026-11-25,Normal,ST-012,1,2026-11-09 11:00,PUN1,ITM-1006,Aluminium plate 6061 10mm,100,KG,,M. Khan,Tool Room
+2026-11-20,Normal,ST-013,1,2026-11-10 12:00,CHK1,ITM-1049,Safety helmet ISI,20,NOS,,P. Shah,Admin
+2026-11-30,Normal,ST-014,1,2026-11-13 10:00,PUN1,ITM-1052,Cutting oil soluble 210L,10,BRL,,M. Khan,Tool Room
+2026-11-30,Normal,ST-015,1,2026-11-19 10:00,PUN1,ITM-1056,Laptop i5 16GB 512GB,2,NOS,,T. Bose,IT
+2026-12-01,Normal,ST-016,1,2026-11-20 10:00,CHK1,ITM-1056,Laptop i5 16GB 512GB,2,NOS,,T. Bose,IT
+2026-12-05,Normal,ST-017,1,2026-11-21 10:00,PUN1,ITM-1057,24 inch monitor,3,NOS,,T. Bose,IT
+2026-11-20,Normal,ST-018,1,2026-11-06 09:00,PUN1,ITM-1043,Stretch film 23 micron,50,KG,,D. Pillai,Stores
+2026-11-20,Normal,ST-018,2,2026-11-06 09:00,CHK1,ITM-1043,Stretch film 23 micron,30,KG,,D. Pillai,Stores
+2026-11-25,Normal,ST-019,1,2026-11-05 10:00,PUN1,ITM-1003,EN8 round bar 40mm,125.5,KG,,M. Khan,Tool Room
+2026-11-20,Normal,ST-020,1,2026-11-04 09:30,PUN1,ITM-9999,Nitrile coated gloves,50,PAIR,,P. Shah,Admin
+2026-11-20,Normal,ST-021,1,2026-11-04 09:45,CHK1,,Nitrle coated glovs for paint shop maintenance,100,PAIR,,P. Shah,Admin
+2026-11-25,Normal,ST-022,1,2026-11-05 11:00,PUN1,,Hex bolt,100,NOS,7,R. Kale,Maintenance
+2026-11-25,Normal,ST-023,1,2026-11-05 12:00,CHK1,ITM-1048,Nitrile coated gloves,40,KG,,P. Shah,Admin
+2026-11-25,Normal,ST-024,1,2026-11-06 10:00,PUN1,ITM-1021,Safety helmet ISI,90,NOS,,R. Kale,Maintenance
+2026-11-25,Normal,ST-025,1,2026-11-07 11:00,PUN1,ITM-1022,Ball bearing 6308-ZZ,10,NOS,,R. Kale,Maintenance
+2026-11-25,Normal,ST-026,1,2026-11-08 12:00,PUN1,ITM-1024,V-belt B-54,45,NOS,,R. Kale,Maintenance
+2026-11-25,Normal,ST-027,1,2026-11-12 13:00,CHK1,ITM-1023,Taper roller bearing 32210,2,NOS,,A. Joshi,Production
+2026-11-20,Normal,ST-028,1,2026-11-03 08:00,PUN1,ITM-1009,Hex bolt M10x40 GR 8.8,1000,NOS,,R. Kale,Maintenance
+2026-11-20,Normal,ST-029,1,2026-11-05 08:00,CHK1,ITM-1009,Hex bolt M10x40 GR 8.8,1000,NOS,,A. Joshi,Production
+2026-11-25,Normal,ST-030,1,2026-11-12 08:00,PUN1,ITM-1014,Hex bolt M16x60 GR 10.9,100,NOS,,R. Kale,Maintenance
+2026-12-01,Normal,ST-031,1,2026-11-20 08:00,PUN1,ITM-1009,Hex bolt M10x40 GR 8.8,100,NOS,,R. Kale,Maintenance
+2026-11-28,Normal,ST-032,1,2026-11-14 10:00,PUN1,ITM-1036,Pneumatic cylinder 50x100,5,NOS,,V. Iyer,Maintenance
+2026-11-28,Normal,ST-033,1,2026-11-15 10:00,CHK1,ITM-1036,Pneumatic cylinder 50x100,5,NOS,,N. Desai,Maintenance
+2026-12-15,Normal,ST-034,1,2026-11-11 10:00,CHK1,ITM-1040,Hydraulic pump seal kit (Hydrax),60,SET,,N. Desai,Maintenance
+2026-11-30,Normal,ST-035,1,2026-11-02 11:00,PUN1,ITM-1061,Housekeeping services (monthly),1,MON,,P. Shah,Admin
+2026-11-23,Normal,ST-036,1,2026-11-09 10:00,PUN1,ITM-1041,Corrugated box 5 ply 600x400x400,200,NOS,,P. Rao,Stores
+2026-11-23,Normal,ST-037,1,2026-11-09 10:20,PUN1,ITM-1041,Corrugated box 5 ply 600x400x400,200,NOS,,P. Rao,Stores
+2026-11-23,Normal,ST-038,1,2026-11-09 10:00,PUN1,ITM-1047,Cotton hand gloves urgent,100,PAIR,,D. Pillai,Stores
+2026-11-23,Normal,ST-039,1,2026-11-10 10:00,PUN1,ITM-1047,Cotton hand gloves,0,PAIR,,D. Pillai,Stores
+2026-11-23,Normal,ST-040,1,2026-11-10 10:05,PUN9,ITM-1047,Cotton hand gloves,10,PAIR,,D. Pillai,Stores
+,Normal,ST-041,1,2026-11-10 10:10,PUN1,ITM-1053,Grease EP2 18kg,5,BKT,,M. Khan,Tool Room
+2026-11-23,Normal,ST-042,1,2026-11-10 10:15,PUN1,ITM-1053,Grease EP2 18kg,ten,BKT,,M. Khan,Tool Room
+2026-11-23,Normal,ST-043,1,,PUN1,ITM-1053,Grease EP2 18kg,5,BKT,,M. Khan,Tool Room
+2026-11-23,Normal,ST-044,1,2026-11-10 10:30,CHK1,ITM-1053,Grease EP2 18kg,4,BKT,,A. Joshi,Production
+2026-11-24,Normal,ST-044,1,2026-11-10 10:40,CHK1,ITM-1053,Grease EP2 18kg,6,BKT,,A. Joshi,Production
+,,,,,,,,,,,,
