@@ -1,0 +1,13 @@
+{
+ "status": "ok",
+ "database": "sqlite",
+ "kit_loaded": false,
+ "rows": {
+  "items": 0,
+  "suppliers": 0,
+  "po_history": 0,
+  "contracts": 0,
+  "policy_versions": 1
+ },
+ "notice": "No kit data loaded. Procurement: load it under Load kit data."
+}

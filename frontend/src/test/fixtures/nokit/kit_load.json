@@ -1,0 +1,51 @@
+{
+ "tables": {
+  "items": {
+   "in_kit": 73,
+   "added": 73
+  },
+  "suppliers": {
+   "in_kit": 48,
+   "added": 48
+  },
+  "plants": {
+   "in_kit": 2,
+   "added": 2
+  },
+  "po_history": {
+   "in_kit": 468,
+   "added": 468
+  },
+  "contracts": {
+   "in_kit": 12,
+   "added": 12
+  },
+  "contract_lines": {
+   "in_kit": 31,
+   "added": 31
+  }
+ },
+ "added": 634,
+ "contract_pdfs": [
+  "RC-2025-011.pdf",
+  "RC-2025-014.pdf",
+  "RC-2025-020.pdf",
+  "RC-2026-002.pdf",
+  "RC-2026-005.pdf",
+  "RC-2026-007.pdf",
+  "RC-2026-009.pdf",
+  "RC-2026-012.pdf",
+  "RC-2026-013.pdf",
+  "RC-2026-015.pdf",
+  "RC-2026-031.pdf",
+  "RC-2026-033.pdf"
+ ],
+ "ignored": [
+  "Cantill_FullStack_Task_Kit/Cantill_FullStack_Task_Brief.pdf: a kit document, not data",
+  "Cantill_FullStack_Task_Kit/Corvo_Procurement_Policy.pdf: a kit document, not data",
+  "Cantill_FullStack_Task_Kit/pr_batches/sample_pr_batch.csv: a PR batch is processed under Batches, never loaded as kit data",
+  "Cantill_FullStack_Task_Kit/README.txt: a kit document, not data",
+  "Cantill_FullStack_Task_Kit/Worked_Examples.pdf: a kit document, not data"
+ ],
+ "message": "Kit loaded: 634 rows added."
+}

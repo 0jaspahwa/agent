@@ -1,0 +1,694 @@
+{
+ "batch_id": 1,
+ "draft_version": "5.1",
+ "effective_from": "2026-11-01",
+ "lines": 186,
+ "lines_under_draft": 186,
+ "changed": 19,
+ "explanation": "19 of 186 lines change",
+ "routes_before": {
+  "CAPEX_SOURCING": 10,
+  "CONTRACT_PO": 33,
+  "EMERGENCY_PO": 6,
+  "NEW_ITEM_SOURCING": 2,
+  "NOT_PROCESSED": 2,
+  "RFP": 8,
+  "RFQ": 53,
+  "SPOT_PO": 72
+ },
+ "routes_after": {
+  "CAPEX_SOURCING": 10,
+  "CONTRACT_PO": 33,
+  "EMERGENCY_PO": 6,
+  "NEW_ITEM_SOURCING": 2,
+  "NOT_PROCESSED": 2,
+  "RFP": 8,
+  "RFQ": 71,
+  "SPOT_PO": 54
+ },
+ "batch_dates": [
+  "2026-11-02",
+  "2026-11-20"
+ ],
+ "changes": [
+  {
+   "line": "PR-26-00009/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S014",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "1500.01",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S014;S013;S015"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00009/1",
+      "PR-26-00027/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00027/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S014",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "1500.01",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S014;S013;S015"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00009/1",
+      "PR-26-00027/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00042/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S023",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "4360.8",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S023;S022;S024"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00042/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00064/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S035",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "2999.66",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S035;S036;S037"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00064/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00067/1",
+   "changes": {
+    "same_po_as": {
+     "before": [
+      "PR-26-00067/1",
+      "PR-26-00110/1"
+     ],
+     "after": [
+      "PR-26-00067/1"
+     ]
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.4",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00070/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S036",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "257.79",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S036;S037;S035"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00070/1",
+      "PR-26-00150/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00072/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S024",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "166.41",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S024;S023;S021"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00072/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00074/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S019",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "252.57",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S019;S017;S018"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00074/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00079/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S026",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "1159.02",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S026;S025;S028"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00079/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00080/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S023",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "19152.28",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S023;S024;S021"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00080/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00105/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S026",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "1159.02",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S026;S025;S028"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00105/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00106/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S027",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "21.59",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S027;S028;S025"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00106/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00108/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S026",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "175.9",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S026;S027;S028"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00108/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00110/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S028",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "1272.72",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S028;S027;S025"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00067/1",
+      "PR-26-00110/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00116/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S020",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "65837.89",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S020;S017;S019"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00116/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00130/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S035",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "2999.66",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S035;S036;S037"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00130/1",
+      "PR-26-00131/1",
+      "PR-26-00132/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00131/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S035",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "2999.66",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S035;S036;S037"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00130/1",
+      "PR-26-00131/1",
+      "PR-26-00132/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00132/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S035",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "2999.66",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S035;S036;S037"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00130/1",
+      "PR-26-00131/1",
+      "PR-26-00132/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  },
+  {
+   "line": "PR-26-00150/1",
+   "changes": {
+    "decision": {
+     "before": "PO",
+     "after": "SOURCING_REQUEST"
+    },
+    "route": {
+     "before": "SPOT_PO",
+     "after": "RFQ"
+    },
+    "supplier_id": {
+     "before": "S036",
+     "after": ""
+    },
+    "unit_price": {
+     "before": "257.79",
+     "after": ""
+    },
+    "suggested_supplier_ids": {
+     "before": "",
+     "after": "S036;S037;S035"
+    },
+    "same_po_as": {
+     "before": [
+      "PR-26-00070/1",
+      "PR-26-00150/1"
+     ],
+     "after": []
+    }
+   },
+   "rule_before": "5.4",
+   "rule_after": "5.5",
+   "version_before": "5.0",
+   "version_after": "5.1"
+  }
+ ]
+}

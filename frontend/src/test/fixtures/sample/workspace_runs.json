@@ -1,0 +1,22 @@
+[
+ {
+  "id": 2,
+  "kind": "chat",
+  "started_at": "2026-11-18T19:18:33",
+  "started_by": "Meera",
+  "batch_id": null,
+  "requirements": 1,
+  "open": 1,
+  "label": "Chat requests (run 2)"
+ },
+ {
+  "id": 1,
+  "kind": "batch",
+  "started_at": "2026-11-18T19:18:32",
+  "started_by": "api",
+  "batch_id": 1,
+  "requirements": 149,
+  "open": 148,
+  "label": "Batch run 1 (batch.csv)"
+ }
+]

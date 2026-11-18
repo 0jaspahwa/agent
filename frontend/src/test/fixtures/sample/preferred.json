@@ -1,0 +1,74 @@
+{
+ "item": {
+  "item_code": "ITM-1048",
+  "description": "Nitrile coated gloves",
+  "category": "Safety & PPE",
+  "uom": "PAIR"
+ },
+ "as_of": "2026-11-01",
+ "policy_version": "5.0",
+ "weights": {
+  "po_count": 1,
+  "recency": 5,
+  "contract_held": 2,
+  "on_time": 1,
+  "quality": 1
+ },
+ "preferred": [
+  {
+   "supplier_id": "S029",
+   "name": "SafeGuard Industrial Supplies",
+   "status": "Active",
+   "on_time_pct": "81.00",
+   "quality": "3.10",
+   "rank": 1,
+   "score": "15.43",
+   "parts": {
+    "po_count": 7,
+    "recency": "5.0",
+    "contract_held": 2,
+    "on_time": "0.81",
+    "quality": "0.62"
+   },
+   "inputs": {
+    "po_count": 7,
+    "last_po_date": "2026-09-26",
+    "recency": "1.0",
+    "contract_held": true,
+    "on_time_pct": "81.00",
+    "quality_rating": "3.10"
+   },
+   "reference_price": "94.00",
+   "reference": "PO 7300328",
+   "exported": true
+  },
+  {
+   "supplier_id": "S030",
+   "name": "Karam Safety Distributor",
+   "status": "Active",
+   "on_time_pct": "72.00",
+   "quality": "3.40",
+   "rank": 2,
+   "score": "10.40",
+   "parts": {
+    "po_count": 4,
+    "recency": "5.0",
+    "contract_held": 0,
+    "on_time": "0.72",
+    "quality": "0.68"
+   },
+   "inputs": {
+    "po_count": 4,
+    "last_po_date": "2026-10-23",
+    "recency": "1.0",
+    "contract_held": false,
+    "on_time_pct": "72.00",
+    "quality_rating": "3.40"
+   },
+   "reference_price": "89.62",
+   "reference": "PO 7300326",
+   "exported": true
+  }
+ ],
+ "topups": []
+}

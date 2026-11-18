@@ -1,0 +1,12 @@
+{
+ "status": "ok",
+ "database": "sqlite",
+ "kit_loaded": true,
+ "rows": {
+  "items": 73,
+  "suppliers": 48,
+  "po_history": 468,
+  "contracts": 12,
+  "policy_versions": 1
+ }
+}

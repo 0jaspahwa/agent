@@ -1,0 +1,483 @@
+[
+ {
+  "supplier_id": "S001",
+  "name": "Bhosari Steel Traders",
+  "status": "Active",
+  "categories": [
+   "Steel & Metals"
+  ],
+  "on_time_pct": "87.00",
+  "quality": "3.30"
+ },
+ {
+  "supplier_id": "S002",
+  "name": "Deccan Metals",
+  "status": "Active",
+  "categories": [
+   "Steel & Metals"
+  ],
+  "on_time_pct": "79.00",
+  "quality": "4.50"
+ },
+ {
+  "supplier_id": "S003",
+  "name": "Shreeji Steel Corporation",
+  "status": "Active",
+  "categories": [
+   "Steel & Metals"
+  ],
+  "on_time_pct": "98.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S004",
+  "name": "Metalink Alloys",
+  "status": "Blocked",
+  "categories": [
+   "Steel & Metals"
+  ],
+  "on_time_pct": "88.00",
+  "quality": "4.70"
+ },
+ {
+  "supplier_id": "S005",
+  "name": "Kalyani Steel Stockists",
+  "status": "Active",
+  "categories": [
+   "Steel & Metals"
+  ],
+  "on_time_pct": "68.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S006",
+  "name": "Unbrako Fastener Distributors",
+  "status": "Active",
+  "categories": [
+   "Fasteners"
+  ],
+  "on_time_pct": "92.00",
+  "quality": "4.80"
+ },
+ {
+  "supplier_id": "S007",
+  "name": "Precision Fasteners Co",
+  "status": "Active",
+  "categories": [
+   "Fasteners"
+  ],
+  "on_time_pct": "88.00",
+  "quality": "2.90"
+ },
+ {
+  "supplier_id": "S008",
+  "name": "Bolt & Nut House",
+  "status": "Blocked",
+  "categories": [
+   "Fasteners"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "3.00"
+ },
+ {
+  "supplier_id": "S009",
+  "name": "Weldtech Supplies",
+  "status": "Active",
+  "categories": [
+   "Welding Consumables"
+  ],
+  "on_time_pct": "83.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S010",
+  "name": "Inox Gases Dealer Pune",
+  "status": "Active",
+  "categories": [
+   "Welding Consumables"
+  ],
+  "on_time_pct": "80.00",
+  "quality": "3.90"
+ },
+ {
+  "supplier_id": "S011",
+  "name": "Spark Welding Stores",
+  "status": "Blocked",
+  "categories": [
+   "Welding Consumables"
+  ],
+  "on_time_pct": "86.00",
+  "quality": "3.30"
+ },
+ {
+  "supplier_id": "S012",
+  "name": "Ador Consumables Agent",
+  "status": "Active",
+  "categories": [
+   "Welding Consumables"
+  ],
+  "on_time_pct": "91.00",
+  "quality": "3.30"
+ },
+ {
+  "supplier_id": "S013",
+  "name": "Industrial Bearings Co",
+  "status": "Active",
+  "categories": [
+   "Bearings & Transmission"
+  ],
+  "on_time_pct": "76.00",
+  "quality": "3.20"
+ },
+ {
+  "supplier_id": "S014",
+  "name": "Mahalaxmi Machine Spares",
+  "status": "Active",
+  "categories": [
+   "Bearings & Transmission"
+  ],
+  "on_time_pct": "95.00",
+  "quality": "4.40"
+ },
+ {
+  "supplier_id": "S015",
+  "name": "Bharat Bearing House",
+  "status": "Active",
+  "categories": [
+   "Bearings & Transmission"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "4.40"
+ },
+ {
+  "supplier_id": "S016",
+  "name": "Chakan Transmission Spares",
+  "status": "Active",
+  "categories": [
+   "Bearings & Transmission"
+  ],
+  "on_time_pct": "70.00",
+  "quality": "3.10"
+ },
+ {
+  "supplier_id": "S017",
+  "name": "Sai Electricals",
+  "status": "Active",
+  "categories": [
+   "Electrical Spares"
+  ],
+  "on_time_pct": "87.00",
+  "quality": "3.70"
+ },
+ {
+  "supplier_id": "S018",
+  "name": "Powerline Switchgear",
+  "status": "Active",
+  "categories": [
+   "Electrical Spares"
+  ],
+  "on_time_pct": "72.00",
+  "quality": "2.80"
+ },
+ {
+  "supplier_id": "S019",
+  "name": "Elcon Automation",
+  "status": "Active",
+  "categories": [
+   "Electrical Spares"
+  ],
+  "on_time_pct": "95.00",
+  "quality": "2.80"
+ },
+ {
+  "supplier_id": "S020",
+  "name": "Vertex CNC Systems",
+  "status": "Active",
+  "categories": [
+   "Electrical Spares",
+   "Capital Equipment"
+  ],
+  "on_time_pct": "92.00",
+  "quality": "3.30"
+ },
+ {
+  "supplier_id": "S021",
+  "name": "Pneumatic Point",
+  "status": "Active",
+  "categories": [
+   "Hydraulics & Pneumatics"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S022",
+  "name": "Fluidline Hydraulics",
+  "status": "Active",
+  "categories": [
+   "Hydraulics & Pneumatics"
+  ],
+  "on_time_pct": "77.00",
+  "quality": "3.50"
+ },
+ {
+  "supplier_id": "S023",
+  "name": "Hydrax Hydraulics",
+  "status": "Active",
+  "categories": [
+   "Hydraulics & Pneumatics"
+  ],
+  "on_time_pct": "74.00",
+  "quality": "3.90"
+ },
+ {
+  "supplier_id": "S024",
+  "name": "Janatics Dealer Chakan",
+  "status": "Active",
+  "categories": [
+   "Hydraulics & Pneumatics"
+  ],
+  "on_time_pct": "89.00",
+  "quality": "4.10"
+ },
+ {
+  "supplier_id": "S025",
+  "name": "Kaveri Corrugators",
+  "status": "Active",
+  "categories": [
+   "Packaging"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "4.80"
+ },
+ {
+  "supplier_id": "S026",
+  "name": "Pallet World",
+  "status": "Active",
+  "categories": [
+   "Packaging"
+  ],
+  "on_time_pct": "90.00",
+  "quality": "3.20"
+ },
+ {
+  "supplier_id": "S027",
+  "name": "Vardhman Packaging",
+  "status": "Active",
+  "categories": [
+   "Packaging"
+  ],
+  "on_time_pct": "98.00",
+  "quality": "4.70"
+ },
+ {
+  "supplier_id": "S028",
+  "name": "Zerust VCI Partner",
+  "status": "Active",
+  "categories": [
+   "Packaging"
+  ],
+  "on_time_pct": "77.00",
+  "quality": "2.80"
+ },
+ {
+  "supplier_id": "S029",
+  "name": "SafeGuard Industrial Supplies",
+  "status": "Active",
+  "categories": [
+   "Safety & PPE"
+  ],
+  "on_time_pct": "81.00",
+  "quality": "3.10"
+ },
+ {
+  "supplier_id": "S030",
+  "name": "Karam Safety Distributor",
+  "status": "Active",
+  "categories": [
+   "Safety & PPE"
+  ],
+  "on_time_pct": "72.00",
+  "quality": "3.40"
+ },
+ {
+  "supplier_id": "S031",
+  "name": "Udyogi Safety Dealer",
+  "status": "Inactive",
+  "categories": [
+   "Safety & PPE"
+  ],
+  "on_time_pct": "78.00",
+  "quality": "3.40"
+ },
+ {
+  "supplier_id": "S032",
+  "name": "Lubrizone Traders",
+  "status": "Active",
+  "categories": [
+   "Lubricants"
+  ],
+  "on_time_pct": "87.00",
+  "quality": "4.00"
+ },
+ {
+  "supplier_id": "S033",
+  "name": "Castrol Industrial Distributor",
+  "status": "Active",
+  "categories": [
+   "Lubricants"
+  ],
+  "on_time_pct": "87.00",
+  "quality": "4.20"
+ },
+ {
+  "supplier_id": "S034",
+  "name": "Servo Lubes Dealer",
+  "status": "Inactive",
+  "categories": [
+   "Lubricants"
+  ],
+  "on_time_pct": "78.00",
+  "quality": "2.90"
+ },
+ {
+  "supplier_id": "S035",
+  "name": "Infoline Systems",
+  "status": "Active",
+  "categories": [
+   "Office & IT"
+  ],
+  "on_time_pct": "79.00",
+  "quality": "4.50"
+ },
+ {
+  "supplier_id": "S036",
+  "name": "Compuworld Technologies",
+  "status": "Active",
+  "categories": [
+   "Office & IT"
+  ],
+  "on_time_pct": "83.00",
+  "quality": "4.30"
+ },
+ {
+  "supplier_id": "S037",
+  "name": "Officekart Supplies",
+  "status": "Active",
+  "categories": [
+   "Office & IT"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "3.80"
+ },
+ {
+  "supplier_id": "S038",
+  "name": "Sparkle Facility Services",
+  "status": "Active",
+  "categories": [
+   "Facility Services"
+  ],
+  "on_time_pct": "90.00",
+  "quality": "3.20"
+ },
+ {
+  "supplier_id": "S039",
+  "name": "Eagle Eye Security Services",
+  "status": "Active",
+  "categories": [
+   "Facility Services"
+  ],
+  "on_time_pct": "76.00",
+  "quality": "4.80"
+ },
+ {
+  "supplier_id": "S040",
+  "name": "Annapurna Caterers",
+  "status": "Active",
+  "categories": [
+   "Facility Services"
+  ],
+  "on_time_pct": "68.00",
+  "quality": "4.80"
+ },
+ {
+  "supplier_id": "S041",
+  "name": "HiCare Pest Control Franchise",
+  "status": "Active",
+  "categories": [
+   "Facility Services"
+  ],
+  "on_time_pct": "79.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S042",
+  "name": "Accurate Calibration Labs",
+  "status": "Active",
+  "categories": [
+   "Testing & Calibration"
+  ],
+  "on_time_pct": "68.00",
+  "quality": "4.00"
+ },
+ {
+  "supplier_id": "S043",
+  "name": "TUV Inspection Partner",
+  "status": "Active",
+  "categories": [
+   "Testing & Calibration"
+  ],
+  "on_time_pct": "81.00",
+  "quality": "3.60"
+ },
+ {
+  "supplier_id": "S044",
+  "name": "Metal Testing Labs",
+  "status": "Active",
+  "categories": [
+   "Testing & Calibration"
+  ],
+  "on_time_pct": "86.00",
+  "quality": "4.60"
+ },
+ {
+  "supplier_id": "S045",
+  "name": "Indo Machinery Works",
+  "status": "Active",
+  "categories": [
+   "Capital Equipment"
+  ],
+  "on_time_pct": "82.00",
+  "quality": "2.90"
+ },
+ {
+  "supplier_id": "S046",
+  "name": "Elgi Compressor Dealer",
+  "status": "Active",
+  "categories": [
+   "Capital Equipment"
+  ],
+  "on_time_pct": "73.00",
+  "quality": "4.10"
+ },
+ {
+  "supplier_id": "S047",
+  "name": "Cranetech Engineers",
+  "status": "Active",
+  "categories": [
+   "Capital Equipment"
+  ],
+  "on_time_pct": "98.00",
+  "quality": "3.20"
+ },
+ {
+  "supplier_id": "S048",
+  "name": "Godrej Material Handling Dealer",
+  "status": "Active",
+  "categories": [
+   "Capital Equipment"
+  ],
+  "on_time_pct": "92.00",
+  "quality": "3.30"
+ }
+]

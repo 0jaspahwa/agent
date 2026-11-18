@@ -1,0 +1,57 @@
+[
+ {
+  "run_id": 2,
+  "kind": "chat",
+  "status": "done",
+  "batch_id": null,
+  "filename": null,
+  "lines": null,
+  "started_by": "Meera",
+  "started_at": "2026-11-18T19:18:33",
+  "finished_at": "2026-11-18T19:18:33.058455",
+  "policy_version_ids": [
+   1
+  ],
+  "policy_mode": {
+   "mode": "by_requirement_date",
+   "note": "each requirement uses the approved version in force on its requirement date"
+  },
+  "engine_version": "97c6e71",
+  "inputs_sha256": "82b4d6f538a1fd949318f5c39e0ace2a25afb4af802b8ff87ca364ba7fd84dac",
+  "export_sha256": "805a774191aeef12a3ae9c387c7f1d87aac840443aef1b04cfd61eec026b2085",
+  "summary_by_route": {
+   "CONTRACT_PO": 1
+  }
+ },
+ {
+  "run_id": 1,
+  "kind": "batch",
+  "status": "done",
+  "batch_id": 1,
+  "filename": "batch.csv",
+  "lines": 186,
+  "started_by": "api",
+  "started_at": "2026-11-18T19:18:32",
+  "finished_at": "2026-11-18T19:18:32.890135",
+  "policy_version_ids": [
+   1
+  ],
+  "policy_mode": {
+   "mode": "by_requirement_date",
+   "note": "each requirement uses the approved version in force on its requirement date"
+  },
+  "engine_version": "97c6e71",
+  "inputs_sha256": "35405dac102f8ece4fa09b52201d5c64250182e36c145f8da002363ff716c2ad",
+  "export_sha256": "bfba9af96497ca423fb001d98fde5891fe6637f913056840eb0746b7932a3e59",
+  "summary_by_route": {
+   "CAPEX_SOURCING": 10,
+   "CONTRACT_PO": 33,
+   "EMERGENCY_PO": 6,
+   "NEW_ITEM_SOURCING": 2,
+   "NOT_PROCESSED": 2,
+   "RFP": 8,
+   "RFQ": 53,
+   "SPOT_PO": 72
+  }
+ }
+]

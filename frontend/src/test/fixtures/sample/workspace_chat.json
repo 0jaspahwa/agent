@@ -1,0 +1,134 @@
+{
+ "run": {
+  "id": 2,
+  "kind": "chat",
+  "started_at": "2026-11-18T19:18:33",
+  "started_by": "Meera",
+  "batch_id": null,
+  "requirements": 1,
+  "open": 1,
+  "label": "Chat requests (run 2)"
+ },
+ "requirements": [
+  {
+   "id": 150,
+   "group_id": "R-0001",
+   "version": 1,
+   "status": "open",
+   "item_code": "ITM-1048",
+   "item_description": "Nitrile coated gloves",
+   "category": "Safety & PPE",
+   "unit": "PAIR",
+   "plant": "CHK1",
+   "requirement_date": "2026-11-17",
+   "total_quantity": "200.000",
+   "value_inr": "18064.00",
+   "decision": "PO",
+   "route": "CONTRACT_PO",
+   "route_words": "Contract PO",
+   "rule_id": "5.2",
+   "policy_version": "5.0",
+   "supplier": {
+    "supplier_id": "S029",
+    "name": "SafeGuard Industrial Supplies",
+    "status": "Active",
+    "on_time_pct": "81.00",
+    "quality": "3.10"
+   },
+   "unit_price": "90.32",
+   "po": {
+    "po_number": "PO-0001",
+    "status": "proposed",
+    "total_value": "18064.00",
+    "supplier": {
+     "supplier_id": "S029",
+     "name": "SafeGuard Industrial Supplies",
+     "status": "Active",
+     "on_time_pct": "81.00",
+     "quality": "3.10"
+    },
+    "requirements": [
+     {
+      "id": 150,
+      "group_id": "R-0001"
+     }
+    ]
+   },
+   "contract_id": "RC-2026-007",
+   "suggestions": [],
+   "sourcing_request": null,
+   "why": {
+    "reason": "5.2 Contract PO (policy v5.0); contract RC-2026-007 with S029 at its rate 90.32 (1181936.00 of its ceiling left after this); value 18064.00 = 200 x 90.32, rate of RC-2026-007, the contract to be used (3.1a)",
+    "clause": "5.2",
+    "price_source": "contract_to_be_used",
+    "price_source_words": "the rate of the contract that will be used (3.1a)",
+    "price_reference": "RC-2026-007",
+    "valuation_note": "rate of RC-2026-007, the contract to be used (3.1a)",
+    "notes": [],
+    "missing": {}
+   },
+   "flags": [],
+   "preferred": [
+    {
+     "supplier_id": "S029",
+     "name": "SafeGuard Industrial Supplies",
+     "status": "Active",
+     "on_time_pct": "81.00",
+     "quality": "3.10",
+     "rank": 1,
+     "score": "15.43",
+     "parts": {
+      "po_count": 7,
+      "recency": "5.0",
+      "contract_held": 2,
+      "on_time": "0.81",
+      "quality": "0.62"
+     },
+     "reference_price": "94.00",
+     "reference": "PO 7300328"
+    },
+    {
+     "supplier_id": "S030",
+     "name": "Karam Safety Distributor",
+     "status": "Active",
+     "on_time_pct": "72.00",
+     "quality": "3.40",
+     "rank": 2,
+     "score": "10.40",
+     "parts": {
+      "po_count": 4,
+      "recency": "5.0",
+      "contract_held": 0,
+      "on_time": "0.72",
+      "quality": "0.68"
+     },
+     "reference_price": "89.62",
+     "reference": "PO 7300326"
+    }
+   ],
+   "lines": [
+    {
+     "pr_no": "PRC-26-00001",
+     "pr_line": "1",
+     "description": "Nitrile coated gloves",
+     "quantity": "200.000",
+     "uom": "PAIR",
+     "need_by": "2026-11-20",
+     "urgency": "Normal",
+     "requester": "Meera",
+     "department": null,
+     "created_at": "2026-11-17T10:30:00",
+     "source": "chat"
+    }
+   ],
+   "history": []
+  }
+ ],
+ "not_processed": [],
+ "plants": [
+  "CHK1"
+ ],
+ "routes": [
+  "CONTRACT_PO"
+ ]
+}

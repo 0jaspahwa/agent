@@ -1,0 +1,380 @@
+[
+ {
+  "contract_id": "RC-2025-011",
+  "supplier_id": "S001",
+  "supplier_name": "Bhosari Steel Traders",
+  "supplier_status": "Active",
+  "start_date": "2025-04-01",
+  "end_date": "2027-03-31",
+  "value_cap": "6000000.00",
+  "consumed_value": "4100000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1001",
+    "description": "MS sheet 2mm 1250x2500",
+    "uom": "NOS",
+    "rate": "6340.39"
+   },
+   {
+    "item_code": "ITM-1002",
+    "description": "MS sheet 3mm 1250x2500",
+    "uom": "NOS",
+    "rate": "9168.71"
+   },
+   {
+    "item_code": "ITM-1003",
+    "description": "EN8 round bar 40mm",
+    "uom": "KG",
+    "rate": "83.69"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2025-020",
+  "supplier_id": "S033",
+  "supplier_name": "Castrol Industrial Distributor",
+  "supplier_status": "Active",
+  "start_date": "2025-10-01",
+  "end_date": "2026-09-30",
+  "value_cap": "2000000.00",
+  "consumed_value": "1350000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1052",
+    "description": "Cutting oil soluble 210L",
+    "uom": "BRL",
+    "rate": "28594.64"
+   },
+   {
+    "item_code": "ITM-1053",
+    "description": "Grease EP2 18kg",
+    "uom": "BKT",
+    "rate": "3928.84"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2025-014",
+  "supplier_id": "S009",
+  "supplier_name": "Weldtech Supplies",
+  "supplier_status": "Active",
+  "start_date": "2025-12-01",
+  "end_date": "2026-11-30",
+  "value_cap": "1500000.00",
+  "consumed_value": "640000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1015",
+    "description": "Welding electrode E6013 3.15mm",
+    "uom": "KG",
+    "rate": "158.51"
+   },
+   {
+    "item_code": "ITM-1016",
+    "description": "MIG wire ER70S-6 1.2mm",
+    "uom": "KG",
+    "rate": "115.26"
+   },
+   {
+    "item_code": "ITM-1019",
+    "description": "Grinding wheel 4 inch",
+    "uom": "NOS",
+    "rate": "39.28"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-002",
+  "supplier_id": "S013",
+  "supplier_name": "Industrial Bearings Co",
+  "supplier_status": "Active",
+  "start_date": "2026-01-01",
+  "end_date": "2026-12-31",
+  "value_cap": "1200000.00",
+  "consumed_value": "1162000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1021",
+    "description": "Ball bearing 6205-2RS",
+    "uom": "NOS",
+    "rate": "202.20"
+   },
+   {
+    "item_code": "ITM-1022",
+    "description": "Ball bearing 6308-ZZ",
+    "uom": "NOS",
+    "rate": "579.62"
+   },
+   {
+    "item_code": "ITM-1023",
+    "description": "Taper roller bearing 32210",
+    "uom": "NOS",
+    "rate": "1361.26"
+   },
+   {
+    "item_code": "ITM-1024",
+    "description": "V-belt B-54",
+    "uom": "NOS",
+    "rate": "311.24"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-007",
+  "supplier_id": "S029",
+  "supplier_name": "SafeGuard Industrial Supplies",
+  "supplier_status": "Active",
+  "start_date": "2026-01-01",
+  "end_date": "2026-12-31",
+  "value_cap": "1500000.00",
+  "consumed_value": "300000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1046",
+    "description": "Safety shoes steel toe",
+    "uom": "PAIR",
+    "rate": "1091.63"
+   },
+   {
+    "item_code": "ITM-1047",
+    "description": "Cotton hand gloves",
+    "uom": "PAIR",
+    "rate": "26.09"
+   },
+   {
+    "item_code": "ITM-1048",
+    "description": "Nitrile coated gloves",
+    "uom": "PAIR",
+    "rate": "90.32"
+   },
+   {
+    "item_code": "ITM-1049",
+    "description": "Safety helmet ISI",
+    "uom": "NOS",
+    "rate": "191.31"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-005",
+  "supplier_id": "S004",
+  "supplier_name": "Metalink Alloys",
+  "supplier_status": "Blocked",
+  "start_date": "2026-02-01",
+  "end_date": "2027-01-31",
+  "value_cap": "3500000.00",
+  "consumed_value": "900000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1006",
+    "description": "Aluminium plate 6061 10mm",
+    "uom": "KG",
+    "rate": "329.54"
+   },
+   {
+    "item_code": "ITM-1007",
+    "description": "MS flat 50x6",
+    "uom": "KG",
+    "rate": "65.78"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-009",
+  "supplier_id": "S025",
+  "supplier_name": "Kaveri Corrugators",
+  "supplier_status": "Active",
+  "start_date": "2026-02-01",
+  "end_date": "2027-01-31",
+  "value_cap": "2500000.00",
+  "consumed_value": "900000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1041",
+    "description": "Corrugated box 5 ply 600x400x400",
+    "uom": "NOS",
+    "rate": "71.50"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-012",
+  "supplier_id": "S038",
+  "supplier_name": "Sparkle Facility Services",
+  "supplier_status": "Active",
+  "start_date": "2026-04-01",
+  "end_date": "2027-03-31",
+  "value_cap": "3000000.00",
+  "consumed_value": "1300000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1061",
+    "description": "Housekeeping services (monthly)",
+    "uom": "MON",
+    "rate": "178463.60"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-013",
+  "supplier_id": "S007",
+  "supplier_name": "Precision Fasteners Co",
+  "supplier_status": "Active",
+  "start_date": "2026-06-01",
+  "end_date": "2027-05-31",
+  "value_cap": "800000.00",
+  "consumed_value": "250000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1009",
+    "description": "Hex bolt M10x40 GR 8.8",
+    "uom": "NOS",
+    "rate": "7.06"
+   },
+   {
+    "item_code": "ITM-1010",
+    "description": "Hex nut M10 GR 8",
+    "uom": "NOS",
+    "rate": "1.81"
+   },
+   {
+    "item_code": "ITM-1011",
+    "description": "Allen cap screw M8x25",
+    "uom": "NOS",
+    "rate": "5.75"
+   },
+   {
+    "item_code": "ITM-1013",
+    "description": "Anchor fastener M12x100",
+    "uom": "NOS",
+    "rate": "36.18"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-015",
+  "supplier_id": "S006",
+  "supplier_name": "Unbrako Fastener Distributors",
+  "supplier_status": "Active",
+  "start_date": "2026-07-01",
+  "end_date": "2027-06-30",
+  "value_cap": "500000.00",
+  "consumed_value": "488000.00",
+  "consumed_as_of": "2026-10-31",
+  "source": "register",
+  "source_file": null,
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1009",
+    "description": "Hex bolt M10x40 GR 8.8",
+    "uom": "NOS",
+    "rate": "6.45"
+   },
+   {
+    "item_code": "ITM-1014",
+    "description": "Hex bolt M16x60 GR 10.9",
+    "uom": "NOS",
+    "rate": "20.64"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-031",
+  "supplier_id": "S021",
+  "supplier_name": "Pneumatic Point",
+  "supplier_status": "Active",
+  "start_date": "2026-11-15",
+  "end_date": "2027-11-14",
+  "value_cap": "2000000.00",
+  "consumed_value": "0.00",
+  "consumed_as_of": null,
+  "source": "pdf",
+  "source_file": "data/contracts/pdf/RC-2026-031.pdf",
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1036",
+    "description": "Pneumatic cylinder 50x100",
+    "uom": "NOS",
+    "rate": "3537.76"
+   },
+   {
+    "item_code": "ITM-1037",
+    "description": "Solenoid valve 5/2 1/4 inch",
+    "uom": "NOS",
+    "rate": "2439.01"
+   },
+   {
+    "item_code": "ITM-1039",
+    "description": "FRL unit 1/2 inch",
+    "uom": "NOS",
+    "rate": "2746.87"
+   }
+  ]
+ },
+ {
+  "contract_id": "RC-2026-033",
+  "supplier_id": "S035",
+  "supplier_name": "Infoline Systems",
+  "supplier_status": "Active",
+  "start_date": "2026-11-20",
+  "end_date": "2027-11-19",
+  "value_cap": "5000000.00",
+  "consumed_value": "0.00",
+  "consumed_as_of": null,
+  "source": "pdf",
+  "source_file": "data/contracts/pdf/RC-2026-033.pdf",
+  "added_by": "seed",
+  "lines": [
+   {
+    "item_code": "ITM-1056",
+    "description": "Laptop i5 16GB 512GB",
+    "uom": "NOS",
+    "rate": "64654.36"
+   },
+   {
+    "item_code": "ITM-1057",
+    "description": "24 inch monitor",
+    "uom": "NOS",
+    "rate": "10689.51"
+   }
+  ]
+ }
+]

@@ -1,0 +1,586 @@
+[
+ {
+  "item_code": "ITM-1001",
+  "description": "MS sheet 2mm 1250x2500",
+  "uom": "NOS",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "6800.00"
+ },
+ {
+  "item_code": "ITM-1002",
+  "description": "MS sheet 3mm 1250x2500",
+  "uom": "NOS",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "9900.00"
+ },
+ {
+  "item_code": "ITM-1003",
+  "description": "EN8 round bar 40mm",
+  "uom": "KG",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "92.00"
+ },
+ {
+  "item_code": "ITM-1004",
+  "description": "SS 304 sheet 1.5mm",
+  "uom": "NOS",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "21500.00"
+ },
+ {
+  "item_code": "ITM-1005",
+  "description": "MS angle 50x50x5",
+  "uom": "KG",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "74.00"
+ },
+ {
+  "item_code": "ITM-1006",
+  "description": "Aluminium plate 6061 10mm",
+  "uom": "KG",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "365.00"
+ },
+ {
+  "item_code": "ITM-1007",
+  "description": "MS flat 50x6",
+  "uom": "KG",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "71.00"
+ },
+ {
+  "item_code": "ITM-1008",
+  "description": "Bright bar EN1A 25mm",
+  "uom": "KG",
+  "category": "Steel & Metals",
+  "item_type": "Material",
+  "standard_price": "88.00"
+ },
+ {
+  "item_code": "ITM-1009",
+  "description": "Hex bolt M10x40 GR 8.8",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "7.50"
+ },
+ {
+  "item_code": "ITM-1010",
+  "description": "Hex nut M10 GR 8",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "1.90"
+ },
+ {
+  "item_code": "ITM-1011",
+  "description": "Allen cap screw M8x25",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "6.20"
+ },
+ {
+  "item_code": "ITM-1012",
+  "description": "Spring washer M10",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "0.80"
+ },
+ {
+  "item_code": "ITM-1013",
+  "description": "Anchor fastener M12x100",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "38.00"
+ },
+ {
+  "item_code": "ITM-1014",
+  "description": "Hex bolt M16x60 GR 10.9",
+  "uom": "NOS",
+  "category": "Fasteners",
+  "item_type": "Material",
+  "standard_price": "24.00"
+ },
+ {
+  "item_code": "ITM-1015",
+  "description": "Welding electrode E6013 3.15mm",
+  "uom": "KG",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "165.00"
+ },
+ {
+  "item_code": "ITM-1016",
+  "description": "MIG wire ER70S-6 1.2mm",
+  "uom": "KG",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "128.00"
+ },
+ {
+  "item_code": "ITM-1017",
+  "description": "Argon gas cylinder 7 cum",
+  "uom": "CYL",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "1450.00"
+ },
+ {
+  "item_code": "ITM-1018",
+  "description": "CO2 gas cylinder 30kg",
+  "uom": "CYL",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "1250.00"
+ },
+ {
+  "item_code": "ITM-1019",
+  "description": "Grinding wheel 4 inch",
+  "uom": "NOS",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "42.00"
+ },
+ {
+  "item_code": "ITM-1020",
+  "description": "Cutting wheel 14 inch",
+  "uom": "NOS",
+  "category": "Welding Consumables",
+  "item_type": "Material",
+  "standard_price": "210.00"
+ },
+ {
+  "item_code": "ITM-1021",
+  "description": "Ball bearing 6205-2RS",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "210.00"
+ },
+ {
+  "item_code": "ITM-1022",
+  "description": "Ball bearing 6308-ZZ",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "640.00"
+ },
+ {
+  "item_code": "ITM-1023",
+  "description": "Taper roller bearing 32210",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "1450.00"
+ },
+ {
+  "item_code": "ITM-1024",
+  "description": "V-belt B-54",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "330.00"
+ },
+ {
+  "item_code": "ITM-1025",
+  "description": "Chain sprocket 08B 20T",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "780.00"
+ },
+ {
+  "item_code": "ITM-1026",
+  "description": "Gearbox oil seal 45x62x8",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "95.00"
+ },
+ {
+  "item_code": "ITM-1027",
+  "description": "Coupling spider L-100",
+  "uom": "NOS",
+  "category": "Bearings & Transmission",
+  "item_type": "Material",
+  "standard_price": "260.00"
+ },
+ {
+  "item_code": "ITM-1028",
+  "description": "Contactor 3 pole 32A",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "1850.00"
+ },
+ {
+  "item_code": "ITM-1029",
+  "description": "MCB 4 pole 63A",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "1650.00"
+ },
+ {
+  "item_code": "ITM-1030",
+  "description": "Proximity sensor M18 PNP",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "1200.00"
+ },
+ {
+  "item_code": "ITM-1031",
+  "description": "Copper cable 4 core 6 sqmm",
+  "uom": "MTR",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "245.00"
+ },
+ {
+  "item_code": "ITM-1032",
+  "description": "LED flood light 100W",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "2350.00"
+ },
+ {
+  "item_code": "ITM-1033",
+  "description": "Servo drive 2kW (Vertex CNC)",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "68500.00"
+ },
+ {
+  "item_code": "ITM-1034",
+  "description": "Encoder for CNC spindle (Vertex)",
+  "uom": "NOS",
+  "category": "Electrical Spares",
+  "item_type": "Material",
+  "standard_price": "42000.00"
+ },
+ {
+  "item_code": "ITM-1035",
+  "description": "Hydraulic hose 1/2 inch 2 wire",
+  "uom": "MTR",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "420.00"
+ },
+ {
+  "item_code": "ITM-1036",
+  "description": "Pneumatic cylinder 50x100",
+  "uom": "NOS",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "3900.00"
+ },
+ {
+  "item_code": "ITM-1037",
+  "description": "Solenoid valve 5/2 1/4 inch",
+  "uom": "NOS",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "2650.00"
+ },
+ {
+  "item_code": "ITM-1038",
+  "description": "Hydraulic oil HLP 68",
+  "uom": "LTR",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "165.00"
+ },
+ {
+  "item_code": "ITM-1039",
+  "description": "FRL unit 1/2 inch",
+  "uom": "NOS",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "2900.00"
+ },
+ {
+  "item_code": "ITM-1040",
+  "description": "Hydraulic pump seal kit (Hydrax)",
+  "uom": "SET",
+  "category": "Hydraulics & Pneumatics",
+  "item_type": "Material",
+  "standard_price": "18500.00"
+ },
+ {
+  "item_code": "ITM-1041",
+  "description": "Corrugated box 5 ply 600x400x400",
+  "uom": "NOS",
+  "category": "Packaging",
+  "item_type": "Material",
+  "standard_price": "78.00"
+ },
+ {
+  "item_code": "ITM-1042",
+  "description": "Wooden pallet 1200x1000",
+  "uom": "NOS",
+  "category": "Packaging",
+  "item_type": "Material",
+  "standard_price": "1150.00"
+ },
+ {
+  "item_code": "ITM-1043",
+  "description": "Stretch film 23 micron",
+  "uom": "KG",
+  "category": "Packaging",
+  "item_type": "Material",
+  "standard_price": "165.00"
+ },
+ {
+  "item_code": "ITM-1044",
+  "description": "VCI bag 600x900",
+  "uom": "NOS",
+  "category": "Packaging",
+  "item_type": "Material",
+  "standard_price": "21.00"
+ },
+ {
+  "item_code": "ITM-1045",
+  "description": "PP strapping roll",
+  "uom": "ROL",
+  "category": "Packaging",
+  "item_type": "Material",
+  "standard_price": "1250.00"
+ },
+ {
+  "item_code": "ITM-1046",
+  "description": "Safety shoes steel toe",
+  "uom": "PAIR",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "1150.00"
+ },
+ {
+  "item_code": "ITM-1047",
+  "description": "Cotton hand gloves",
+  "uom": "PAIR",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "28.00"
+ },
+ {
+  "item_code": "ITM-1048",
+  "description": "Nitrile coated gloves",
+  "uom": "PAIR",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "95.00"
+ },
+ {
+  "item_code": "ITM-1049",
+  "description": "Safety helmet ISI",
+  "uom": "NOS",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "210.00"
+ },
+ {
+  "item_code": "ITM-1050",
+  "description": "Safety goggles clear",
+  "uom": "NOS",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "120.00"
+ },
+ {
+  "item_code": "ITM-1051",
+  "description": "Ear plugs disposable",
+  "uom": "PAIR",
+  "category": "Safety & PPE",
+  "item_type": "Material",
+  "standard_price": "9.00"
+ },
+ {
+  "item_code": "ITM-1052",
+  "description": "Cutting oil soluble 210L",
+  "uom": "BRL",
+  "category": "Lubricants",
+  "item_type": "Material",
+  "standard_price": "31500.00"
+ },
+ {
+  "item_code": "ITM-1053",
+  "description": "Grease EP2 18kg",
+  "uom": "BKT",
+  "category": "Lubricants",
+  "item_type": "Material",
+  "standard_price": "4200.00"
+ },
+ {
+  "item_code": "ITM-1054",
+  "description": "Way lube oil 68",
+  "uom": "LTR",
+  "category": "Lubricants",
+  "item_type": "Material",
+  "standard_price": "210.00"
+ },
+ {
+  "item_code": "ITM-1055",
+  "description": "Slideway oil 220",
+  "uom": "LTR",
+  "category": "Lubricants",
+  "item_type": "Material",
+  "standard_price": "230.00"
+ },
+ {
+  "item_code": "ITM-1056",
+  "description": "Laptop i5 16GB 512GB",
+  "uom": "NOS",
+  "category": "Office & IT",
+  "item_type": "Material",
+  "standard_price": "68000.00"
+ },
+ {
+  "item_code": "ITM-1057",
+  "description": "24 inch monitor",
+  "uom": "NOS",
+  "category": "Office & IT",
+  "item_type": "Material",
+  "standard_price": "11500.00"
+ },
+ {
+  "item_code": "ITM-1058",
+  "description": "A4 paper 75 GSM",
+  "uom": "REAM",
+  "category": "Office & IT",
+  "item_type": "Material",
+  "standard_price": "265.00"
+ },
+ {
+  "item_code": "ITM-1059",
+  "description": "Toner cartridge HP 88A",
+  "uom": "NOS",
+  "category": "Office & IT",
+  "item_type": "Material",
+  "standard_price": "2950.00"
+ },
+ {
+  "item_code": "ITM-1060",
+  "description": "Wireless keyboard mouse combo",
+  "uom": "NOS",
+  "category": "Office & IT",
+  "item_type": "Material",
+  "standard_price": "1450.00"
+ },
+ {
+  "item_code": "ITM-1061",
+  "description": "Housekeeping services (monthly)",
+  "uom": "MON",
+  "category": "Facility Services",
+  "item_type": "Service",
+  "standard_price": "185000.00"
+ },
+ {
+  "item_code": "ITM-1062",
+  "description": "Security guard services (monthly)",
+  "uom": "MON",
+  "category": "Facility Services",
+  "item_type": "Service",
+  "standard_price": "240000.00"
+ },
+ {
+  "item_code": "ITM-1063",
+  "description": "Pest control (quarterly)",
+  "uom": "QTR",
+  "category": "Facility Services",
+  "item_type": "Service",
+  "standard_price": "18000.00"
+ },
+ {
+  "item_code": "ITM-1064",
+  "description": "Canteen services (monthly)",
+  "uom": "MON",
+  "category": "Facility Services",
+  "item_type": "Service",
+  "standard_price": "310000.00"
+ },
+ {
+  "item_code": "ITM-1065",
+  "description": "Calibration of vernier & micrometers",
+  "uom": "JOB",
+  "category": "Testing & Calibration",
+  "item_type": "Service",
+  "standard_price": "9500.00"
+ },
+ {
+  "item_code": "ITM-1066",
+  "description": "CMM calibration service",
+  "uom": "JOB",
+  "category": "Testing & Calibration",
+  "item_type": "Service",
+  "standard_price": "65000.00"
+ },
+ {
+  "item_code": "ITM-1067",
+  "description": "Material testing - tensile test",
+  "uom": "JOB",
+  "category": "Testing & Calibration",
+  "item_type": "Service",
+  "standard_price": "3500.00"
+ },
+ {
+  "item_code": "ITM-1068",
+  "description": "Third party inspection visit",
+  "uom": "JOB",
+  "category": "Testing & Calibration",
+  "item_type": "Service",
+  "standard_price": "18000.00"
+ },
+ {
+  "item_code": "ITM-1069",
+  "description": "CNC turning centre 8 inch chuck",
+  "uom": "NOS",
+  "category": "Capital Equipment",
+  "item_type": "Capex",
+  "standard_price": "4200000.00"
+ },
+ {
+  "item_code": "ITM-1070",
+  "description": "Air compressor 30HP screw",
+  "uom": "NOS",
+  "category": "Capital Equipment",
+  "item_type": "Capex",
+  "standard_price": "780000.00"
+ },
+ {
+  "item_code": "ITM-1071",
+  "description": "EOT crane 5 ton",
+  "uom": "NOS",
+  "category": "Capital Equipment",
+  "item_type": "Capex",
+  "standard_price": "1450000.00"
+ },
+ {
+  "item_code": "ITM-1072",
+  "description": "Hydraulic press 100 ton",
+  "uom": "NOS",
+  "category": "Capital Equipment",
+  "item_type": "Capex",
+  "standard_price": "2600000.00"
+ },
+ {
+  "item_code": "ITM-1073",
+  "description": "Forklift electric 2 ton",
+  "uom": "NOS",
+  "category": "Capital Equipment",
+  "item_type": "Capex",
+  "standard_price": "1150000.00"
+ }
+]

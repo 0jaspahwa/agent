@@ -1,0 +1,17 @@
+[
+ {
+  "id": 1,
+  "policy_id": "CORVO-PROC-POL-04",
+  "version": "5.0",
+  "status": "approved",
+  "drafting_status": "ready",
+  "drafting_seconds": null,
+  "effective_from": "2026-04-01",
+  "change_summary": "Baseline policy transcribed from the PDF. Readings of points the PDF leaves open are in DECISIONS.md (D1-D10).",
+  "drafted_by": "seed",
+  "approved_by": "seed",
+  "approved_at": "2026-11-18T19:18:31.845157",
+  "closed_by": null,
+  "base_version_id": null
+ }
+]
