@@ -1,0 +1,219 @@
+{
+  "schema_version": "1",
+  "policy_id": "CORVO-PROC-POL-04",
+  "version": "5.0",
+  "effective_from": "2026-04-01",
+  "supersedes": null,
+  "source_document": "Corvo_Procurement_Policy.pdf, version 5.0, effective 1 April 2026",
+  "change_summary": "Baseline policy transcribed from the PDF. Readings of points the PDF leaves open are in DECISIONS.md (D1-D10).",
+
+  "parameters": {
+    "limits": {
+      "emergency_po": {"value": 500000, "operator": "<=", "clause": "5.3", "text": "at or below 5,00,000", "decisions": ["D10"]},
+      "spot_po":      {"value": 200000, "operator": "<",  "clause": "5.4", "text": "below 2,00,000"},
+      "rfq":          {"value": 1000000, "operator": "<", "clause": "5.5", "text": "below 10,00,000 (rule 5.6, RFP, is everything not below it)"}
+    },
+    "clubbing": {
+      "creation_window": {"length": 14, "unit": "calendar_days", "inclusive": true, "measured_from": "first_line", "clause": "2.2", "decisions": ["D4"]},
+      "need_by_window":  {"length": 7,  "unit": "calendar_days", "inclusive": true, "either_side": true, "measured_from": "first_line", "clause": "2.2", "decisions": ["D5"]},
+      "match_on": ["item_code", "plant"],
+      "order_by": ["created_at", "pr_no", "pr_line"],
+      "clause": "2.2"
+    },
+    "consolidation": {
+      "window": {"length": 24, "unit": "hours", "inclusive": true, "measured_from": "first_requirement_on_po", "clause": "7.1", "decisions": ["D6"]},
+      "match_on": ["supplier_id", "plant", "route"],
+      "clause": "7.1, 7.2"
+    },
+    "contracts": {
+      "validity": {"start_inclusive": true, "end_inclusive": true, "clause": "4.1", "decisions": ["D7"]},
+      "ceiling": {"operator": "<=", "clause": "4.2", "text": "consumed value + this requirement's value at the contract rate must not exceed the ceiling"},
+      "selection": "lowest_rate_with_ceiling",
+      "selection_clause": "4.3"
+    },
+    "history": {
+      "valuation_window": {"length": 365, "unit": "calendar_days", "inclusive": true, "include_reference_date": false, "clause": "3.1(b)", "decisions": ["D3", "D8"]},
+      "purchase_window":  {"length": 365, "unit": "calendar_days", "inclusive": true, "include_reference_date": false, "clause": "5.3, 5.4", "decisions": ["D3", "D8"]},
+      "preferred_window": {"length": 548, "unit": "calendar_days", "inclusive": true, "include_reference_date": false, "clause": "6.1, 6.3", "decisions": ["D3", "D8"]}
+    },
+    "valuation": {
+      "price_sources": ["contract_to_be_used", "lowest_applicable_contract_rate", "latest_po_in_window", "standard_price"],
+      "include_non_active_suppliers": true,
+      "tie_break": "highest_po_number",
+      "new_item_price": "requester_estimate",
+      "clause": "3.1, 1.2",
+      "decisions": ["D1", "D2"]
+    },
+    "matching": {
+      "noise_phrases": ["as per sample", "as per drawing", "as per spec", "for maintenance", "for breakdown", "(repeat)", "repeat order", "- urgent", "urgent", "urgently", "asap", "please", "pls"],
+      "abbreviations": {"brg": "bearing", "brgs": "bearing", "hyd": "hydraulic", "pneu": "pneumatic", "cyl": "cylinder", "elec": "electric"},
+      "symbols": {"\"": "inch", "''": "inch"},
+      "purpose_clause": {"words": ["for", "as per", "against"], "separators": ["-", "/"], "brackets": true,
+                         "text": "second pass only if the full description gives no match: text in brackets, or a trailing clause after a marker word or a spaced separator, is removed and the rest matched again (shortest removal first); the number gate still applies"},
+      "number_weight": 2,
+      "min_word_coverage": 0.75,
+      "match_threshold": 0.6,
+      "ambiguity_margin": 0.02,
+      "ambiguity_floor": 0.3,
+      "word_similarity": 0.8,
+      "fuzzy_min_word_length": 4,
+      "clause": "1.1",
+      "text": "numbers in the description (sizes, part numbers, grades) must all appear in the item and are never fuzzy; at least min_word_coverage of the description words must be in the item (words may be fuzzy, for typos); score = shared tokens (Dice, numbers weighted number_weight); best item must reach match_threshold; top scores within ambiguity_margin of each other (and at least ambiguity_floor) are ambiguous -> new item",
+      "decisions": ["D20", "D21"]
+    },
+    "intake": {
+      "urgency_values": {"normal": "Normal", "emergency": "Emergency"},
+      "default_urgency": "Normal",
+      "urgency_words": ["urgent", "urgently", "asap", "emergency"],
+      "possible_duplicate_window": {"length": 30, "unit": "minutes", "inclusive": true, "decisions": ["D27"]},
+      "text": "urgency is compared case-insensitively; blank or unrecognised is treated as the default (flag F2); urgency_words in a description raise flag F5",
+      "decisions": ["D19"]
+    },
+    "suppliers": {
+      "allowed_statuses": {
+        "receive_po":                 ["Active"],
+        "be_suggested":               ["Active"],
+        "count_for_purchase_history": ["Active"],
+        "hold_applicable_contract":   ["Active"],
+        "join_preferred_list":        ["Active"]
+      },
+      "clause": "5.7 (PO, suggestion), 5.3/5.4 (bought from an Active supplier), 4.1 (contract supplier Active), 6.1 (preferred list)"
+    },
+    "ranking": {
+      "recency_buckets": {
+        "buckets": [
+          {"max_age_days": 90,  "inclusive": true, "score": 1.0},
+          {"max_age_days": 365, "inclusive": true, "score": 0.5}
+        ],
+        "older_score": 0.0,
+        "include_reference_date": false,
+        "clause": "6.2",
+        "decisions": ["D8"]
+      },
+      "category_topup": {"on_time_weight": 1.0, "quality_weight": 1.0, "text": "on_time_pct/100 + quality_rating/5", "clause": "6.4"},
+      "reference_price": {"order": ["latest_po_in_preferred_window", "latest_contract_rate"], "tie_break": "highest_po_number", "clause": "6.3", "decisions": ["D1"]},
+      "preferred_score": {"weights": {"po_count": 1, "recency": 5, "contract_held": 2, "on_time": 1, "quality": 1},
+                          "text": "score = po_count x 1 + recency bucket x 5 + contract held x 2 + on_time_pct/100 x 1 + quality_rating/5 x 1; fitted to every ordering in the kit (scripts/ranking_constraints.py)",
+                          "clause": "6.2", "decisions": ["D24"]},
+      "tie_break": {"order_by": "supplier_id", "direction": "ascending", "applies_to": ["preferred_score", "category_topup"], "clause": "6.2, 6.4", "decisions": ["D13"]}
+    }
+  },
+
+  "overrides": [],
+
+  "derived_facts": [
+    {
+      "name": "is_emergency",
+      "clause": "2.3",
+      "description": "The requirement is an emergency if any of its lines is marked Emergency.",
+      "expr": {"some": [{"var": "lines"}, {"==": [{"var": "urgency"}, "Emergency"]}]}
+    }
+  ],
+
+  "line_checks": [
+    {"id": "V1", "title": "Quantity must be positive",
+     "when": {"<=": [{"var": "line.quantity"}, 0]},
+     "reason": "Quantity is zero or negative", "decisions": ["D45"]},
+    {"id": "V2", "title": "Plant must exist",
+     "when": {"!": {"var": "plant.plant"}},
+     "reason": "Plant is not in the plant master", "decisions": ["D45"]},
+    {"id": "V3", "title": "No duplicate PR line",
+     "when": {"==": [{"var": "line.is_duplicate"}, true]},
+     "reason": "Duplicate of an earlier line with the same PR number and line number; only the first is processed", "decisions": ["D19"]},
+    {"id": "V4", "title": "Need-by date required",
+     "when": {"==": [{"var": "line.need_by_date"}, null]},
+     "reason": "Need-by date is missing or unreadable", "decisions": ["D19"]},
+    {"id": "V5", "title": "Unit must match the item",
+     "when": {"==": [{"var": "line.uom_mismatch"}, true]},
+     "reason": "Unit of measure differs from the item's unit, so the value cannot be computed", "decisions": ["D19"]},
+    {"id": "V6", "title": "Quantity must be a number",
+     "when": {"==": [{"var": "line.quantity"}, null]},
+     "reason": "Quantity is missing or not a number", "decisions": ["D19"]},
+    {"id": "V7", "title": "Creation time required",
+     "when": {"==": [{"var": "line.created_at"}, null]},
+     "reason": "Creation time is missing or unreadable", "decisions": ["D17", "D19"]}
+  ],
+
+  "line_flags": [
+    {"id": "F1", "title": "Need-by before creation",
+     "when": {"<": [{"date_diff_days": [{"var": "line.need_by_date"}, {"var": "line.created_at"}]}, 0]},
+     "message": "Need-by date is earlier than the creation date", "decisions": ["D19"]},
+    {"id": "F2", "title": "Urgency not recognised",
+     "when": {"==": [{"var": "line.urgency_recognised"}, false]},
+     "message": "Urgency is blank or not recognised; treated as Normal", "decisions": ["D19"]},
+    {"id": "F3", "title": "Unknown item code",
+     "when": {"==": [{"var": "match.item_code_unknown"}, true]},
+     "message": "Item code is not in the item master; the description was matched instead", "decisions": ["D19"]},
+    {"id": "F4", "title": "Code and description disagree",
+     "when": {"==": [{"var": "match.description_disagrees"}, true]},
+     "message": "Item code and description disagree; the item code was used (policy 1.1)", "decisions": ["D19"]},
+    {"id": "F5", "title": "Description says urgent",
+     "when": {"and": [{"==": [{"var": "line.description_says_urgent"}, true]}, {"!=": [{"var": "line.urgency"}, "Emergency"]}]},
+     "message": "Description says urgent but the urgency field is not Emergency; the field was used", "decisions": ["D45"]},
+    {"id": "F6", "title": "Unit missing",
+     "when": {"==": [{"var": "line.uom"}, null]},
+     "message": "Unit of measure is missing; the item's unit was assumed", "decisions": ["D19"]},
+    {"id": "F7", "title": "Possible duplicate",
+     "when": {"==": [{"var": "line.possible_duplicate"}, true]},
+     "message": "Possible duplicate of {line.possible_duplicate_of}: same requester, item, plant, quantity and need-by date, created within minutes; both lines are kept and clubbed", "decisions": ["D27"]}
+  ],
+
+  "rules": [
+    {
+      "id": "1.2",
+      "title": "New item",
+      "clause_text": "A line that matches no item master item is a new item. It always goes to sourcing.",
+      "when": {"==": [{"var": "requirement.is_new_item"}, true]},
+      "then": {"decision": "SOURCING_REQUEST", "route": "NEW_ITEM_SOURCING", "supplier": "none", "price": "none", "suggest_count": 0}
+    },
+    {
+      "id": "5.1",
+      "title": "Capex",
+      "clause_text": "The item type is Capex. Suggest 5 suppliers (6.4). Needs capex approval.",
+      "when": {"==": [{"var": "item.item_type"}, "Capex"]},
+      "then": {"decision": "SOURCING_REQUEST", "route": "CAPEX_SOURCING", "supplier": "suggest", "price": "none", "suggest_count": 5, "flags": ["capex_approval_required"]}
+    },
+    {
+      "id": "5.2",
+      "title": "Contract PO",
+      "clause_text": "A contract can be used (4.1 to 4.3). Contract supplier at contract rate.",
+      "when": {"==": [{"var": "contract.usable"}, true]},
+      "then": {"decision": "PO", "route": "CONTRACT_PO", "supplier": "contract_supplier", "price": "contract_rate", "suggest_count": 0}
+    },
+    {
+      "id": "5.3",
+      "title": "Emergency PO",
+      "clause_text": "Emergency, value at or below 5,00,000, and the item was bought from an Active supplier in the last 365 days. 1st preferred supplier at its reference price.",
+      "when": {"and": [
+        {"==": [{"var": "derived.is_emergency"}, true]},
+        {"meets_limit": [{"var": "requirement.value_inr"}, "limits.emergency_po"]},
+        {"==": [{"var": "history.bought_from_active"}, true]}
+      ]},
+      "then": {"decision": "PO", "route": "EMERGENCY_PO", "supplier": "preferred_rank_1", "price": "reference_price", "suggest_count": 0}
+    },
+    {
+      "id": "5.4",
+      "title": "Spot PO",
+      "clause_text": "Value below 2,00,000, and the item was bought from an Active supplier in the last 365 days. 1st preferred supplier at its reference price.",
+      "when": {"and": [
+        {"meets_limit": [{"var": "requirement.value_inr"}, "limits.spot_po"]},
+        {"==": [{"var": "history.bought_from_active"}, true]}
+      ]},
+      "then": {"decision": "PO", "route": "SPOT_PO", "supplier": "preferred_rank_1", "price": "reference_price", "suggest_count": 0}
+    },
+    {
+      "id": "5.5",
+      "title": "RFQ",
+      "clause_text": "Value below 10,00,000 (including small items never bought in the last 365 days). Suggest 3 suppliers (6.4).",
+      "when": {"meets_limit": [{"var": "requirement.value_inr"}, "limits.rfq"]},
+      "then": {"decision": "SOURCING_REQUEST", "route": "RFQ", "supplier": "suggest", "price": "none", "suggest_count": 3}
+    },
+    {
+      "id": "5.6",
+      "title": "RFP",
+      "clause_text": "Value 10,00,000 or more. Suggest 5 suppliers (6.4).",
+      "when": {"!": {"meets_limit": [{"var": "requirement.value_inr"}, "limits.rfq"]}},
+      "then": {"decision": "SOURCING_REQUEST", "route": "RFP", "supplier": "suggest", "price": "none", "suggest_count": 5}
+    }
+  ]
+}
