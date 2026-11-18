@@ -1,0 +1,23 @@
+{
+  "what_it_tests": "Both ways an amendment can be plant-specific: a different number for CHK1 (must be an override on limits.spot_po) and a new CHK1-only rule inserted between 5.3 and 5.4.",
+  "effective_from": "2026-12-01",
+  "require_override_for": ["limits.spot_po"],
+  "expect_resolved_parameters": [
+    {"plant": "CHK1", "path": "limits.spot_po.value", "equals": 100000},
+    {"plant": "CHK1", "path": "limits.spot_po.operator", "equals": "<"},
+    {"plant": "PUN1", "path": "limits.spot_po.value", "equals": 200000}
+  ],
+  "require_new_rules": [{"after": "5.3", "before": "5.4", "route": "RFQ", "suggest_count": 3}],
+  "allowed_change_prefixes": ["overrides[", "rules[5.3A", "rule order"],
+  "cases": [
+    {"name": "CHK1 just under its new spot limit",       "plant": "CHK1", "value": 99999,   "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "CHK1 at its new spot limit",               "plant": "CHK1", "value": 100000,  "v5_route": "SPOT_PO", "expect_route": "RFQ"},
+    {"name": "PUN1 keeps 2 lakh",                        "plant": "PUN1", "value": 150000,  "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "CHK1 lubricant, small",                    "plant": "CHK1", "value": 20000,   "category": "Lubricants", "v5_route": "SPOT_PO", "expect_route": "RFQ"},
+    {"name": "PUN1 lubricant, small (not affected)",     "plant": "PUN1", "value": 20000,   "category": "Lubricants", "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "CHK1 lubricant, emergency (5.3 first)",    "plant": "CHK1", "value": 20000,   "category": "Lubricants", "urgency": ["Emergency"], "v5_route": "EMERGENCY_PO", "expect_route": "EMERGENCY_PO"},
+    {"name": "CHK1 lubricant on contract (5.2 first)",   "plant": "CHK1", "value": 20000,   "category": "Lubricants", "contract_usable": true, "v5_route": "CONTRACT_PO", "expect_route": "CONTRACT_PO"},
+    {"name": "CHK1 lubricant, 10 lakh or more",          "plant": "CHK1", "value": 1200000, "category": "Lubricants", "v5_route": "RFP", "expect_route": "RFP"},
+    {"name": "CHK1 lubricant never bought",              "plant": "CHK1", "value": 20000,   "category": "Lubricants", "bought_from_active": false, "v5_route": "RFQ", "expect_route": "RFQ"}
+  ]
+}

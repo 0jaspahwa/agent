@@ -1,0 +1,16 @@
+{
+  "what_it_tests": "A rule that needs a fact the catalogue lacks (price premium over standard price), so the draft must add a derived fact, insert rule 5.3B between 5.3 and 5.4, and cope with a missing standard price for new items.",
+  "effective_from": "2027-01-01",
+  "expect_new_derived_facts": 1,
+  "require_new_rules": [{"after": "5.3", "before": "5.4", "route": "RFQ", "suggest_count": 3}],
+  "allowed_change_prefixes": ["derived_facts[", "rules[5.3B", "rule order"],
+  "cases": [
+    {"name": "16% above standard, history-valued",    "plant": "PUN1", "value": 116000, "standard_price": 100, "valuation_price": 116, "valuation_source": "latest_po_in_window", "v5_route": "SPOT_PO", "expect_route": "RFQ"},
+    {"name": "exactly 15% above (not 'more than')",   "plant": "PUN1", "value": 115000, "standard_price": 100, "valuation_price": 115, "valuation_source": "latest_po_in_window", "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "below standard price",                  "plant": "CHK1", "value": 90000,  "standard_price": 100, "valuation_price": 90,  "valuation_source": "latest_po_in_window", "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "20% above but valued at a contract rate", "plant": "PUN1", "value": 120000, "standard_price": 100, "valuation_price": 120, "valuation_source": "lowest_applicable_contract_rate", "v5_route": "SPOT_PO", "expect_route": "SPOT_PO"},
+    {"name": "emergency unaffected",                  "plant": "PUN1", "value": 116000, "standard_price": 100, "valuation_price": 116, "valuation_source": "latest_po_in_window", "urgency": ["Emergency"], "v5_route": "EMERGENCY_PO", "expect_route": "EMERGENCY_PO"},
+    {"name": "premium but 10 lakh or more",           "plant": "PUN1", "value": 1160000, "standard_price": 100, "valuation_price": 116, "valuation_source": "latest_po_in_window", "v5_route": "RFP", "expect_route": "RFP"},
+    {"name": "new item without standard price",       "plant": "PUN1", "value": 141100, "new_item": true, "valuation_price": 141100, "valuation_source": "requester_estimate", "v5_route": "NEW_ITEM_SOURCING", "expect_route": "NEW_ITEM_SOURCING"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "what_it_tests": "Two limit changes, one of which also changes the comparison operator (below -> at or below).",
+  "effective_from": "2026-12-01",
+  "expect_parameters": {
+    "limits.spot_po.value": 150000,
+    "limits.spot_po.operator": "<=",
+    "limits.emergency_po.value": 750000,
+    "limits.emergency_po.operator": "<="
+  },
+  "allowed_change_prefixes": [
+    "parameters.limits.spot_po.", "parameters.limits.emergency_po.",
+    "rules[5.3].clause_text", "rules[5.4].clause_text"
+  ],
+  "cases": [
+    {"name": "spot exactly at the new limit",   "plant": "PUN1", "value": 150000,  "v5_route": "SPOT_PO",      "expect_route": "SPOT_PO"},
+    {"name": "just above the new spot limit",   "plant": "PUN1", "value": 150001,  "v5_route": "SPOT_PO",      "expect_route": "RFQ"},
+    {"name": "between old and new spot limit",  "plant": "CHK1", "value": 199999,  "v5_route": "SPOT_PO",      "expect_route": "RFQ"},
+    {"name": "emergency at the new limit",      "plant": "PUN1", "value": 750000,  "urgency": ["Emergency"], "v5_route": "RFQ", "expect_route": "EMERGENCY_PO"},
+    {"name": "emergency just above new limit",  "plant": "PUN1", "value": 750001,  "urgency": ["Emergency"], "v5_route": "RFQ", "expect_route": "RFQ"},
+    {"name": "small but never bought",          "plant": "PUN1", "value": 50000,   "bought_from_active": false, "v5_route": "RFQ", "expect_route": "RFQ"},
+    {"name": "RFP unchanged",                   "plant": "PUN1", "value": 1000000, "v5_route": "RFP",          "expect_route": "RFP"}
+  ]
+}

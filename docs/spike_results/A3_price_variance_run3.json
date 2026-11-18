@@ -1,0 +1,554 @@
+{
+ "schema_version": "1",
+ "policy_id": "CORVO-PROC-POL-04",
+ "version": "5.1",
+ "effective_from": "2027-01-01",
+ "supersedes": "5.0",
+ "source_document": "Corvo Engineering Pvt Ltd: Procurement Policy Amendment A-3 (Price variance control)",
+ "change_summary": "Adds clause 5.3B to route requirements valued from purchase history with price variance > 15% over standard price to RFQ or RFP instead of Spot PO.",
+ "parameters": {
+  "limits": {
+   "emergency_po": {
+    "value": 500000,
+    "operator": "<=",
+    "clause": "5.3",
+    "text": "at or below 5,00,000",
+    "decisions": [
+     "D10"
+    ]
+   },
+   "spot_po": {
+    "value": 200000,
+    "operator": "<",
+    "clause": "5.4",
+    "text": "below 2,00,000"
+   },
+   "rfq": {
+    "value": 1000000,
+    "operator": "<",
+    "clause": "5.5",
+    "text": "below 10,00,000 (rule 5.6, RFP, is everything not below it)"
+   },
+   "price_variance": {
+    "value": 15,
+    "operator": ">",
+    "clause": "5.3B",
+    "text": "more than 15% above standard price"
+   }
+  },
+  "clubbing": {
+   "creation_window": {
+    "length": 14,
+    "unit": "calendar_days",
+    "inclusive": true,
+    "measured_from": "first_line",
+    "clause": "2.2",
+    "decisions": [
+     "D4"
+    ]
+   },
+   "need_by_window": {
+    "length": 7,
+    "unit": "calendar_days",
+    "inclusive": true,
+    "either_side": true,
+    "measured_from": "first_line",
+    "clause": "2.2",
+    "decisions": [
+     "D5"
+    ]
+   },
+   "match_on": [
+    "item_code",
+    "plant"
+   ],
+   "order_by": [
+    "created_at",
+    "pr_no",
+    "pr_line"
+   ],
+   "clause": "2.2"
+  },
+  "consolidation": {
+   "window": {
+    "length": 24,
+    "unit": "hours",
+    "inclusive": true,
+    "measured_from": "first_requirement_on_po",
+    "clause": "7.1",
+    "decisions": [
+     "D6"
+    ]
+   },
+   "match_on": [
+    "supplier_id",
+    "plant",
+    "route"
+   ],
+   "clause": "7.1, 7.2"
+  },
+  "contracts": {
+   "validity": {
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "clause": "4.1",
+    "decisions": [
+     "D7"
+    ]
+   },
+   "ceiling": {
+    "operator": "<=",
+    "clause": "4.2",
+    "text": "consumed value + this requirement's value at the contract rate must not exceed the ceiling"
+   },
+   "selection": "lowest_rate_with_ceiling",
+   "selection_clause": "4.3"
+  },
+  "history": {
+   "valuation_window": {
+    "length": 365,
+    "unit": "calendar_days",
+    "inclusive": true,
+    "include_reference_date": false,
+    "clause": "3.1(b)",
+    "decisions": [
+     "D3",
+     "D8"
+    ]
+   },
+   "purchase_window": {
+    "length": 365,
+    "unit": "calendar_days",
+    "inclusive": true,
+    "include_reference_date": false,
+    "clause": "5.3, 5.4",
+    "decisions": [
+     "D3",
+     "D8"
+    ]
+   },
+   "preferred_window": {
+    "length": 548,
+    "unit": "calendar_days",
+    "inclusive": true,
+    "include_reference_date": false,
+    "clause": "6.1, 6.3",
+    "decisions": [
+     "D3",
+     "D8"
+    ]
+   }
+  },
+  "valuation": {
+   "price_sources": [
+    "contract_to_be_used",
+    "lowest_applicable_contract_rate",
+    "latest_po_in_window",
+    "standard_price"
+   ],
+   "include_non_active_suppliers": true,
+   "tie_break": "highest_po_number",
+   "new_item_price": "requester_estimate",
+   "clause": "3.1, 1.2",
+   "decisions": [
+    "D1",
+    "D2"
+   ]
+  },
+  "suppliers": {
+   "allowed_statuses": {
+    "receive_po": [
+     "Active"
+    ],
+    "be_suggested": [
+     "Active"
+    ],
+    "count_for_purchase_history": [
+     "Active"
+    ],
+    "hold_applicable_contract": [
+     "Active"
+    ],
+    "join_preferred_list": [
+     "Active"
+    ]
+   },
+   "clause": "5.7 (PO, suggestion), 5.3/5.4 (bought from an Active supplier), 4.1 (contract supplier Active), 6.1 (preferred list)"
+  },
+  "ranking": {
+   "recency_buckets": {
+    "buckets": [
+     {
+      "max_age_days": 90,
+      "inclusive": true,
+      "score": 1.0
+     },
+     {
+      "max_age_days": 365,
+      "inclusive": true,
+      "score": 0.5
+     }
+    ],
+    "older_score": 0.0,
+    "include_reference_date": false,
+    "clause": "6.2",
+    "decisions": [
+     "D8"
+    ]
+   },
+   "category_topup": {
+    "on_time_weight": 1.0,
+    "quality_weight": 1.0,
+    "text": "on_time_pct/100 + quality_rating/5",
+    "clause": "6.4"
+   },
+   "reference_price": {
+    "order": [
+     "latest_po_in_preferred_window",
+     "latest_contract_rate"
+    ],
+    "tie_break": "highest_po_number",
+    "clause": "6.3",
+    "decisions": [
+     "D1"
+    ]
+   },
+   "preferred_score": {
+    "status": "not designed yet: weights are fitted to the three worked rankings during the engine build",
+    "components": [
+     "po_count",
+     "recency",
+     "contract_held",
+     "on_time_pct",
+     "quality_rating"
+    ],
+    "clause": "6.2"
+   },
+   "tie_break": {
+    "order_by": "supplier_id",
+    "direction": "ascending",
+    "applies_to": [
+     "preferred_score",
+     "category_topup"
+    ],
+    "clause": "6.2, 6.4",
+    "decisions": [
+     "D13"
+    ]
+   }
+  }
+ },
+ "overrides": [],
+ "derived_facts": [
+  {
+   "name": "is_emergency",
+   "clause": "2.3",
+   "description": "The requirement is an emergency if any of its lines is marked Emergency.",
+   "expr": {
+    "some": [
+     {
+      "var": "lines"
+     },
+     {
+      "==": [
+       {
+        "var": "urgency"
+       },
+       "Emergency"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "price_premium_pct",
+   "clause": "5.3B",
+   "description": "Valuation price above standard price, in percent",
+   "expr": {
+    "*": [
+     100,
+     {
+      "/": [
+       {
+        "-": [
+         {
+          "var": "requirement.valuation_price"
+         },
+         {
+          "var": "item.standard_price"
+         }
+        ]
+       },
+       {
+        "var": "item.standard_price"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "line_checks": [
+  {
+   "id": "V1",
+   "title": "Quantity must be positive",
+   "when": {
+    "!": {
+     "and": [
+      {
+       "!!": [
+        {
+         "var": "line.quantity"
+        }
+       ]
+      },
+      {
+       ">": [
+        {
+         "var": "line.quantity"
+        },
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "reason": "Quantity is missing or not positive",
+   "decisions": [
+    "CLAUDE.md section 10"
+   ]
+  },
+  {
+   "id": "V2",
+   "title": "Plant must exist",
+   "when": {
+    "!": {
+     "var": "plant.plant"
+    }
+   },
+   "reason": "Plant is not in the plant master",
+   "decisions": [
+    "CLAUDE.md section 10"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "1.2",
+   "title": "New item",
+   "clause_text": "A line that matches no item master item is a new item. It always goes to sourcing.",
+   "when": {
+    "==": [
+     {
+      "var": "requirement.is_new_item"
+     },
+     true
+    ]
+   },
+   "then": {
+    "decision": "SOURCING_REQUEST",
+    "route": "NEW_ITEM_SOURCING",
+    "supplier": "none",
+    "price": "none",
+    "suggest_count": 0
+   }
+  },
+  {
+   "id": "5.1",
+   "title": "Capex",
+   "clause_text": "The item type is Capex. Suggest 5 suppliers (6.4). Needs capex approval.",
+   "when": {
+    "==": [
+     {
+      "var": "item.item_type"
+     },
+     "Capex"
+    ]
+   },
+   "then": {
+    "decision": "SOURCING_REQUEST",
+    "route": "CAPEX_SOURCING",
+    "supplier": "suggest",
+    "price": "none",
+    "suggest_count": 5,
+    "flags": [
+     "capex_approval_required"
+    ]
+   }
+  },
+  {
+   "id": "5.2",
+   "title": "Contract PO",
+   "clause_text": "A contract can be used (4.1 to 4.3). Contract supplier at contract rate.",
+   "when": {
+    "==": [
+     {
+      "var": "contract.usable"
+     },
+     true
+    ]
+   },
+   "then": {
+    "decision": "PO",
+    "route": "CONTRACT_PO",
+    "supplier": "contract_supplier",
+    "price": "contract_rate",
+    "suggest_count": 0
+   }
+  },
+  {
+   "id": "5.3",
+   "title": "Emergency PO",
+   "clause_text": "Emergency, value at or below 5,00,000, and the item was bought from an Active supplier in the last 365 days. 1st preferred supplier at its reference price.",
+   "when": {
+    "and": [
+     {
+      "==": [
+       {
+        "var": "derived.is_emergency"
+       },
+       true
+      ]
+     },
+     {
+      "meets_limit": [
+       {
+        "var": "requirement.value_inr"
+       },
+       "limits.emergency_po"
+      ]
+     },
+     {
+      "==": [
+       {
+        "var": "history.bought_from_active"
+       },
+       true
+      ]
+     }
+    ]
+   },
+   "then": {
+    "decision": "PO",
+    "route": "EMERGENCY_PO",
+    "supplier": "preferred_rank_1",
+    "price": "reference_price",
+    "suggest_count": 0
+   }
+  },
+  {
+   "id": "5.3B",
+   "title": "Price variance control",
+   "clause_text": "Where a requirement is valued from purchase history under clause 3.1(b), and its valuation unit price is more than 15% above the item master standard price, it must not be placed as a spot PO. It goes to RFQ with 3 suggested suppliers if its value is below ₹10,00,000; otherwise clause 5.6 (RFP) applies. Contract POs (5.2) and emergency POs (5.3) are not affected.",
+   "when": {
+    "and": [
+     {
+      "==": [
+       {
+        "var": "requirement.valuation_source"
+       },
+       "latest_po_in_window"
+      ]
+     },
+     {
+      "meets_limit": [
+       {
+        "var": "derived.price_premium_pct"
+       },
+       "limits.price_variance"
+      ]
+     },
+     {
+      "meets_limit": [
+       {
+        "var": "requirement.value_inr"
+       },
+       "limits.rfq"
+      ]
+     }
+    ]
+   },
+   "then": {
+    "decision": "SOURCING_REQUEST",
+    "route": "RFQ",
+    "supplier": "suggest",
+    "price": "none",
+    "suggest_count": 3
+   }
+  },
+  {
+   "id": "5.4",
+   "title": "Spot PO",
+   "clause_text": "Value below 2,00,000, and the item was bought from an Active supplier in the last 365 days. 1st preferred supplier at its reference price.",
+   "when": {
+    "and": [
+     {
+      "meets_limit": [
+       {
+        "var": "requirement.value_inr"
+       },
+       "limits.spot_po"
+      ]
+     },
+     {
+      "==": [
+       {
+        "var": "history.bought_from_active"
+       },
+       true
+      ]
+     }
+    ]
+   },
+   "then": {
+    "decision": "PO",
+    "route": "SPOT_PO",
+    "supplier": "preferred_rank_1",
+    "price": "reference_price",
+    "suggest_count": 0
+   }
+  },
+  {
+   "id": "5.5",
+   "title": "RFQ",
+   "clause_text": "Value below 10,00,000 (including small items never bought in the last 365 days). Suggest 3 suppliers (6.4).",
+   "when": {
+    "meets_limit": [
+     {
+      "var": "requirement.value_inr"
+     },
+     "limits.rfq"
+    ]
+   },
+   "then": {
+    "decision": "SOURCING_REQUEST",
+    "route": "RFQ",
+    "supplier": "suggest",
+    "price": "none",
+    "suggest_count": 3
+   }
+  },
+  {
+   "id": "5.6",
+   "title": "RFP",
+   "clause_text": "Value 10,00,000 or more. Suggest 5 suppliers (6.4).",
+   "when": {
+    "!": {
+     "meets_limit": [
+      {
+       "var": "requirement.value_inr"
+      },
+      "limits.rfq"
+     ]
+    }
+   },
+   "then": {
+    "decision": "SOURCING_REQUEST",
+    "route": "RFP",
+    "supplier": "suggest",
+    "price": "none",
+    "suggest_count": 5
+   }
+  }
+ ]
+}
