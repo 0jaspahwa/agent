@@ -1,0 +1,36 @@
+# docker compose up   ->  Postgres + the app on http://localhost:8000 (tables created and kit seeded on start).
+# The task kit is not in the repo or the image: put its folders in ./data (mounted read-only below), or upload
+# the kit zip in the app under Load kit data.
+# The database credentials below are for local development only.
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: corvo
+      POSTGRES_PASSWORD: corvo
+      POSTGRES_DB: corvo
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U corvo -d corvo"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - path: .env          # LLM settings and key, if present; never baked into the image
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://corvo:corvo@db:5432/corvo
+    volumes:
+      - ./data:/app/data:ro
+    ports:
+      - "8000:8000"
+
+volumes:
+  pgdata:

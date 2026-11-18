@@ -1,0 +1,13 @@
+.git
+.venv
+venv
+.env
+.env.*
+**/__pycache__
+.pytest_cache
+data
+**/*.db
+scripts/out
+Cantill_FullStack_Task_Kit
+frontend/node_modules
+frontend/dist
