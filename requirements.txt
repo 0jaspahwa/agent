@@ -1,0 +1,12 @@
+# Pinned so Run 1 / Run 2 behave the same locally and on the hosted app.
+# Only what is used today; the LLM SDK is added when first needed (the amendment script uses urllib).
+fastapi==0.163.1
+uvicorn==0.54.0
+pydantic==2.14.3
+python-dotenv==1.2.4
+pytest==9.2.0
+httpx2==2.16.2
+SQLAlchemy==2.1.8
+psycopg[binary]==3.3.9
+pypdf==7.1.0
+python-multipart==0.0.34

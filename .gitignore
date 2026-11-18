@@ -1,0 +1,33 @@
+# Secrets: API keys live only in .env, never in the repo
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Node (frontend, later)
+node_modules/
+frontend/dist/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# The task kit must not be in the public repo (task rules). Put its folders in data/ locally, or upload the
+# kit zip in the app under Load kit data. Our own test files live in backend/tests/fixtures/.
+/data/
+/Cantill_FullStack_Task_Kit/
+*.zip
+
+# Local scratch output from throwaway scripts
+scripts/out/
