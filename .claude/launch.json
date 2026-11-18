@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "app (SQLite, no LLM)",
+      "runtimeExecutable": ".venv/Scripts/python",
+      "runtimeArgs": ["scripts/dev_server.py"],
+      "port": 8000
+    }
+  ]
+}
