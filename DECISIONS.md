@@ -852,3 +852,37 @@ The response is JSON (run id, counts by route, one decision object per line with
 **Why.** One obvious, working action per screen is what the brief asks for; a button that fails for your role, or an action that can be undone by accident, is worse than no button.
 
 *Status: confirmed by Ojas, 2026-11-18; tightened by the break-it pass the same day.*
+
+# Blind test notes (19 Nov 2026)
+
+Run on the hosted app through its own endpoints only (scripts/apply_amendment_steps.md); no code changed after
+10:00. The three files in `submission/` are exactly what the app exported.
+
+- **Run 1** (`ojaspahwa__run1.csv`): `hidden_pr_batch.csv` (190 lines, 23 Nov to 11 Dec) under the named version 5.0,
+  before any amendment was approved. Two lines are NOT_PROCESSED: PR-26-00674/1 (zero quantity, V1) and
+  PR-26-00675/1 (plant PUN2, V2).
+- **The AI draft failed; the manual draft was approved under label 5.2.** The amendment PDF was uploaded at 10:36
+  and the AI draft (draft 4) failed at 10:41: both Gemini models answered 503 or timed out (D32, D38). A failed draft
+  keeps the label it was given (5.1) and cannot be edited (409), and the app never reuses a label (D34), so the
+  manual draft from the current version (draft 5) was labelled 5.2. It was written by hand to the amendment, checked
+  clause by clause (no errors, no warnings) and approved by Ojas Pahwa (Procurement) as **version 5.2 = Amendment
+  No. 1** (the document calls it 5.1), effective 2026-12-01. Its change summary says so. The one correction made
+  before approval: the wording of rules 5.5 and 5.6 (`clause_text`) now says 8,00,000 instead of 10,00,000, to
+  match A2; their conditions and outcomes did not change. Draft 4 was left as it is (failed, not discarded).
+- **Run 2 was processed by requirement date** (`ojaspahwa__run2.csv`, D36), so November requirements stay on v5.0:
+  92 rows are 5.0 and 98 are 5.2. Requirements dated before 1 December are identical to Run 1 in decision, route,
+  supplier, price and value. 19 lines change, all dated 1 to 9 December, exactly the impact preview's 19.
+- **A requirement that starts in November stays on v5.0 even when it gains December lines**, because its date is its
+  first line's date (D22). 12 of the 110 December lines are in this position, for example PR-26-00609/1 (a
+  Packaging line created on 10 December that joins requirement R-0047, started on 28 November): it is decided under
+  v5.0, not A1 (R-0047 is worth 5,80,470, so it is an RFQ under either version).
+- **A1** (Packaging spot limit 1,00,000) is an override on `limits.spot_po` only: it changes the spot limit and leaves
+  emergency POs (rule 5.3) as they are, because unlike A3 it does not say otherwise. 7 lines move from spot PO to
+  RFQ.
+- **A2** (RFP threshold 8,00,000) changes `limits.rfq`; rule 5.6 stays "not below the RFQ limit". 4 lines move from
+  RFQ to RFP.
+- **A3** (Chakan electrical safety) is written as two rules, 5.2A (RFQ) and 5.2B (its RFP part), immediately after
+  5.2, because each rule has exactly one route; both compare with `limits.rfq` by name, so they follow A2. 8 lines
+  move from spot PO to RFQ; none reached the RFP part.
+- **Preferred lists** (`ojaspahwa__preferred.csv`) as of 2026-12-01: top 3 per item (D31), 155 rows for 68 items, no
+  Blocked or Inactive supplier.
